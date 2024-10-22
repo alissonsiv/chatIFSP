@@ -180,6 +180,11 @@ const keywords = {
         info: 'O IFSP (Instituto Federal de São Paulo) é uma instituição de ensino que oferece cursos técnicos, superiores e de pós-graduação, com foco em educação tecnológica, pesquisa e extensão, promovendo desenvolvimento social e econômico.\n\nSe você tiver uma pergunta mais específica, sinta-se à vontade para perguntar! Estou aqui para ajudar.'
     },
 
+    'instagram ifsp': {
+        keywords: ['nstagram'],
+        info: 'O IFSP (Instituto Federal de São Paulo) é uma instituição de ensino que oferece cursos técnicos, superiores e de pós-graduação, com foco em educação tecnológica, pesquisa e extensão, promovendo desenvolvimento social e econômico.\n\nSe você tiver uma pergunta mais específica, sinta-se à vontade para perguntar! Estou aqui para ajudar.'
+    },
+
     //PROFESSORES
     'professor ailson': {
         keywords: ['professor ailson'],
