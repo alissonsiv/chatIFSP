@@ -69,10 +69,6 @@ const keywords = {
         keywords: ['ads', 'sistemas', 'tecnologo'],
         info: 'O curso de Tecnólogo em Análise e Desenvolvimento de Sistemas (ADS) forma profissionais capacitados para atuar no desenvolvimento de software e gerenciamento de sistemas computacionais. O curso tem duração de 5 semestres, com aulas presenciais no período noturno. A entrada é realizada por meio do SISU (Sistema de Seleção Unificada), que utiliza as notas do Enem para selecionar candidatos. Para mais informações, visite o site da instituição.'
     },
-    'curso': {
-        keywords: ['curs'],
-        info: 'O IFSP Campus Salto disponibiliza 4 cursos técnicos, 5 cursos de graduação e 3 cursos de pós-graduação.\n\nPara obter mais informações, faça a pergunta relativo ao curso técnico, como "Fale sobre o técnico em informática".'
-    },
     'tecnico': {
         keywords: ['tecnico'],
         info: 'O IFSP Campus Salto oferece os seguintes cursos técnicos: Informática para Internet, Mecatrônica, Administração EAD e Automação Industrial. Os cursos são disponibilizados nas modalidades integrados ao Ensino Médio e concomitantes ou subsequentes.\n\nPara mais informações, pergunte sobre o curso técnico desejado, como por exemplo: "Fale sobre o curso técnico em Informática."'
@@ -80,6 +76,10 @@ const keywords = {
     'graduacao': {
         keywords: ['graduacao'],
         info: 'O IFSP Campus Salto oferece um total de cinco graduações. Entre os Bacharelados, estão disponíveis os cursos de Ciência da Computação e Engenharia de Controle e Automação. Na área de Licenciaturas, o campus oferece os cursos de Letras - Português e Matemática. Além disso, na categoria de Cursos Tecnológicos, está disponível o curso de Análise e Desenvolvimento de Sistemas. Se desejar mais informações, sinta-se à vontade para perguntar!'
+    },
+    'curso': {
+        keywords: ['curso', 'cursos', 'curs'],
+        info: 'O IFSP Campus Salto disponibiliza 4 cursos técnicos, 5 cursos de graduação e 3 cursos de pós-graduação.\n\nPara obter mais informações, faça a pergunta relativo ao curso técnico, como "Fale sobre o técnico em informática".'
     },
     'acesso_suap': {
         keywords: ['acesso suap'],
@@ -460,17 +460,16 @@ const keywords = {
 // Função para buscar a resposta
 function searchKeywords(keywords, question) {
     let found = null;
-    const normalizedQuestion = removeAccents(question.toLowerCase()); // Normaliza a pergunta
-    const questionWords = normalizedQuestion.split(' '); // Divide a pergunta em palavras
+    const normalizedQuestion = removeAccents(question.toLowerCase());
+    const questionWords = normalizedQuestion.split(' ');
 
     for (const [key, value] of Object.entries(keywords)) {
         for (const keyword of value.keywords) {
-            const normalizedKeyword = removeAccents(keyword.toLowerCase()); // Normaliza a palavra-chave
-            const keywordWords = normalizedKeyword.split(' '); // Divide a palavra-chave em palavras
+            const normalizedKeyword = removeAccents(keyword.toLowerCase());
+            const keywordWords = normalizedKeyword.split(' ');
 
-            // Verifica se todas as palavras da palavra-chave estão presentes na pergunta
             if (keywordWords.every(word => questionWords.includes(word))) {
-                return value.info; // Retorna a informação correspondente
+                return value.info;
             }
         }
     }
@@ -486,49 +485,41 @@ function getAnswer() {
     }
 
     document.getElementById('response').innerText = response;
-    speak(response);
 
     // Adiciona a animação de "talk" à imagem do robô
     const roboImage = document.getElementById('robo-image');
     roboImage.classList.add('talk');
 
-    // Remove a animação de "talk" após a fala ser finalizada
-    const utterance = new SpeechSynthesisUtterance(response);
+    speak(response, roboImage);
+}
+
+// Função para converter texto em fala
+function speak(text, roboImage) {
+    const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'pt-BR';
     utterance.rate = 1.3;
-    
-    let voices = window.speechSynthesis.getVoices();
-    const preferredVoice = voices.find(voice => voice.lang === 'pt-BR' && voice.name.includes('Google')) || voices[0];
-    utterance.voice = preferredVoice;
 
     // Quando a fala terminar, remover a animação
     utterance.onend = () => {
         roboImage.classList.remove('talk');
     };
-    
-    window.speechSynthesis.speak(utterance);
-}
 
-
-
-// Função para converter texto em fala
-function speak(text) {
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'pt-BR';
-    utterance.rate = 1.3;
-    
     let voices = window.speechSynthesis.getVoices();
+
+    // Se as vozes ainda não foram carregadas
     if (!voices.length) {
         window.speechSynthesis.onvoiceschanged = () => {
             voices = window.speechSynthesis.getVoices();
             const preferredVoice = voices.find(voice => voice.lang === 'pt-BR' && voice.name.includes('Google')) || voices[0];
             utterance.voice = preferredVoice;
-            window.speechSynthesis.speak(utterance);
+            window.speechSynthesis.speak(utterance); 
         };
     } else {
         const preferredVoice = voices.find(voice => voice.lang === 'pt-BR' && voice.name.includes('Google')) || voices[0];
         utterance.voice = preferredVoice;
-        window.speechSynthesis.speak(utterance);
+        window.speechSynthesis.speak(utterance); 
     }
+    
+    // Adiciona a animação de "talk" à imagem do robô
+    roboImage.classList.add('talk');
 }
-
