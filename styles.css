@@ -7,17 +7,17 @@ body {
 
 #header {
     margin-bottom: 20px;
+    text-align: center; /* Centraliza os itens dentro do cabeçalho */
 }
 
-#header h1 {
-    font-size: 3em;
-    color: #333;
-    margin: 0;
+#logo-image {
+    width: 300px; /* Ajuste a largura do logo conforme necessário */
+    margin-bottom: 10px; /* Espaçamento abaixo do logo */
 }
 
 #robo-image {
-    width: 400px;
-    margin-top: 10px;
+    width: 450px; /* Largura do robô */
+    margin-top: 10px; /* Espaçamento acima do robô */
 }
 
 @keyframes talk {

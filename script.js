@@ -536,6 +536,4 @@ function speak(text) {
         utterance.voice = preferredVoice;
         window.speechSynthesis.speak(utterance);
     }
-    
-    // A animação já está sendo iniciada no getAnswer
 }
