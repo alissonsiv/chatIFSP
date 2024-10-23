@@ -70,7 +70,7 @@ const keywords = {
         info: 'O curso de Tecnólogo em Análise e Desenvolvimento de Sistemas (ADS) forma profissionais capacitados para atuar no desenvolvimento de software e gerenciamento de sistemas computacionais. O curso tem duração de 5 semestres, com aulas presenciais no período noturno. A entrada é realizada por meio do SISU (Sistema de Seleção Unificada), que utiliza as notas do Enem para selecionar candidatos. Para mais informações, visite o site da instituição.'
     },
     'curso': {
-        keywords: ['curso'],
+        keywords: ['curs'],
         info: 'O IFSP Campus Salto disponibiliza 4 cursos técnicos, 5 cursos de graduação e 3 cursos de pós-graduação.\n\nPara obter mais informações, faça a pergunta relativo ao curso técnico, como "Fale sobre o técnico em informática".'
     },
     'tecnico': {
@@ -477,7 +477,6 @@ function searchKeywords(keywords, question) {
     return found;
 }
 
-// Função para gerar resposta
 function getAnswer() {
     const question = removeAccents(document.getElementById('question').value.toLowerCase());
     let response = searchKeywords(keywords, question);
@@ -488,7 +487,29 @@ function getAnswer() {
 
     document.getElementById('response').innerText = response;
     speak(response);
+
+    // Adiciona a animação de "talk" à imagem do robô
+    const roboImage = document.getElementById('robo-image');
+    roboImage.classList.add('talk');
+
+    // Remove a animação de "talk" após a fala ser finalizada
+    const utterance = new SpeechSynthesisUtterance(response);
+    utterance.lang = 'pt-BR';
+    utterance.rate = 1.3;
+    
+    let voices = window.speechSynthesis.getVoices();
+    const preferredVoice = voices.find(voice => voice.lang === 'pt-BR' && voice.name.includes('Google')) || voices[0];
+    utterance.voice = preferredVoice;
+
+    // Quando a fala terminar, remover a animação
+    utterance.onend = () => {
+        roboImage.classList.remove('talk');
+    };
+    
+    window.speechSynthesis.speak(utterance);
 }
+
+
 
 // Função para converter texto em fala
 function speak(text) {

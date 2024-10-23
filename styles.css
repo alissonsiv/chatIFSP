@@ -5,6 +5,36 @@ body {
     padding: 50px;
 }
 
+#header {
+    margin-bottom: 20px;
+}
+
+#header h1 {
+    font-size: 3em;
+    color: #333;
+    margin: 0;
+}
+
+#robo-image {
+    width: 400px;
+    margin-top: 10px;
+}
+
+@keyframes talk {
+    0%, 100% {
+        transform: scale(1); /* Tamanho normal */
+    }
+    50% {
+        transform: scale(1.2); /* Leve aumento no meio da animação */
+    }
+}
+
+#robo-image.talk {
+    animation: talk 1s ease-in-out infinite; /* Duração de 1 segundo e animação contínua */
+}
+
+
+
 #container {
     background-color: #fff;
     border-radius: 8px;
