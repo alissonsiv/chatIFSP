@@ -16,7 +16,12 @@
 
     <div id="container">
         <h2>Faça uma pergunta</h2>
-        <input type="text" id="question" placeholder="Digite sua pergunta aqui">
+        <div id="input-container">
+            <input type="text" id="question" placeholder="Digite sua pergunta aqui">
+            <button id="mic-button">
+                🎤
+            </button>
+        </div>
         <br>
         <button onclick="getAnswer()">Enviar</button>
         <p id="response"></p>

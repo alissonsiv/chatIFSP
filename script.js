@@ -537,3 +537,50 @@ function speak(text) {
         window.speechSynthesis.speak(utterance);
     }
 }
+
+let recognition;
+const micButton = document.getElementById('mic-button');
+const questionInput = document.getElementById('question');
+
+// Verifica se o navegador suporta a Web Speech API
+if ('webkitSpeechRecognition' in window) {
+    recognition = new webkitSpeechRecognition();
+    recognition.lang = 'pt-BR';
+    recognition.continuous = false;
+    recognition.interimResults = false;
+
+    // Evento disparado quando a fala é reconhecida
+    recognition.onresult = function(event) {
+        const speechResult = event.results[0][0].transcript;
+        questionInput.value = speechResult;
+    
+        // Chama a função para buscar a resposta automaticamente
+        getAnswer(); 
+    };
+    
+
+    // Evento disparado quando a gravação é iniciada
+    recognition.onstart = function() {
+        micButton.classList.add('listening');
+    };
+
+    // Evento disparado quando a gravação é finalizada
+    recognition.onend = function() {
+        micButton.classList.remove('listening');
+    };
+
+    // Evento para lidar com erros
+    recognition.onerror = function(event) {
+        alert('Erro ao reconhecer a fala: ' + event.error);
+        micButton.classList.remove('listening');
+    };
+} else {
+    alert('Seu navegador não suporta a Web Speech API');
+}
+
+// Função para iniciar ou parar o reconhecimento de fala
+micButton.addEventListener('click', function() {
+    if (recognition) {
+        recognition.start();
+    }
+});
