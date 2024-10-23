@@ -33,8 +33,6 @@ body {
     animation: talk 1s ease-in-out infinite; /* Duração de 1 segundo e animação contínua */
 }
 
-
-
 #container {
     background-color: #fff;
     border-radius: 8px;

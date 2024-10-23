@@ -476,6 +476,9 @@ function searchKeywords(keywords, question) {
     return found;
 }
 
+let imageIndex = 0; // Índice da imagem do robô
+let animationInterval; // Variável para armazenar o intervalo da animação
+
 function getAnswer() {
     const question = removeAccents(document.getElementById('question').value.toLowerCase());
     let response = searchKeywords(keywords, question);
@@ -486,22 +489,36 @@ function getAnswer() {
 
     document.getElementById('response').innerText = response;
 
-    // Adiciona a animação de "talk" à imagem do robô
-    const roboImage = document.getElementById('robo-image');
-    roboImage.classList.add('talk');
+    // Inicia a animação do robô
+    startAnimation();
 
-    speak(response, roboImage);
+    speak(response);
 }
 
-// Função para converter texto em fala
-function speak(text, roboImage) {
+function startAnimation() {
+    const roboImage = document.getElementById('robo-image');
+
+    // Intervalo para mudar a imagem do robô
+    animationInterval = setInterval(() => {
+        imageIndex = (imageIndex + 1) % 5; // Alterna entre 0 e 4
+        roboImage.src = `robo${imageIndex + 1}.png`; // Atualiza a imagem do robô
+    }, 200); // Muda a imagem a cada 200ms
+}
+
+function stopAnimation() {
+    clearInterval(animationInterval); // Para a animação
+    const roboImage = document.getElementById('robo-image');
+    roboImage.src = 'robo1.png'; // Reseta a imagem para o robô inicial
+}
+
+function speak(text) {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'pt-BR';
     utterance.rate = 1.3;
 
-    // Quando a fala terminar, remover a animação
+    // Quando a fala terminar, parar a animação
     utterance.onend = () => {
-        roboImage.classList.remove('talk');
+        stopAnimation(); // Certifica-se de que a animação seja parada
     };
 
     let voices = window.speechSynthesis.getVoices();
@@ -512,14 +529,13 @@ function speak(text, roboImage) {
             voices = window.speechSynthesis.getVoices();
             const preferredVoice = voices.find(voice => voice.lang === 'pt-BR' && voice.name.includes('Google')) || voices[0];
             utterance.voice = preferredVoice;
-            window.speechSynthesis.speak(utterance); 
+            window.speechSynthesis.speak(utterance);
         };
     } else {
         const preferredVoice = voices.find(voice => voice.lang === 'pt-BR' && voice.name.includes('Google')) || voices[0];
         utterance.voice = preferredVoice;
-        window.speechSynthesis.speak(utterance); 
+        window.speechSynthesis.speak(utterance);
     }
     
-    // Adiciona a animação de "talk" à imagem do robô
-    roboImage.classList.add('talk');
+    // A animação já está sendo iniciada no getAnswer
 }
