@@ -16,16 +16,16 @@ body {
 }
 
 #robo-image {
-    width: 450px; /* Largura do robô */
-    margin-top: 10px; /* Espaçamento acima do robô */
+    width: 650px; /* Largura do robô */
+    margin-top: -60px; /* Espaçamento acima do robô */
 }
 
 @keyframes talk {
     0%, 100% {
-        transform: scale(1); /* Tamanho normal */
+        transform: scale(1); 
     }
     50% {
-        transform: scale(1.2); /* Leve aumento no meio da animação */
+        transform: scale(1.2); 
     }
 }
 
@@ -40,6 +40,7 @@ body {
     padding: 20px;
     max-width: 500px;
     margin: auto;
+    margin-top: -20px;
 }
 
 input[type="text"] {
@@ -90,7 +91,7 @@ button:hover {
     border: 2px solid #fff;
     border-radius: 50%;
     cursor: pointer;
-    position: relative; /* Define a posição relativa */
+    position: relative;
     top: -5px; /* Move o botão 10px para cima */
 }
 
