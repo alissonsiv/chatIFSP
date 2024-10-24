@@ -10,14 +10,14 @@ function removeAccents(str) {
 const keywords = {
     'endereco': {
         keywords: ['endereco'],
-        info: 'O IFSP Campus Salto está localizado na Av. dos Três Poderes, nº 375, no Residencial Central Parque, em Salto, São Paulo, oferecendo educação pública de qualidade em diversas áreas.'
+        info: 'O IFSP Campus Salto está localizado na Av. dos Três Poderes, nº 375, no Residencial Central Parque, em Salto, São Paulo.'
     },
     'telefone': {
         keywords: ['telefone', 'contato'],
         info: 'O telefone do IFSP Campus Salto é (11) 4602-9191, utilizado para atender a consultas e fornecer informações sobre cursos, inscrições e outros serviços oferecidos pela instituição.'
     },
     'funcionamento': {
-        keywords: ['funcionamento'],
+        keywords: ['funcionamento', 'horas abre'],
         info: 'O IFSP Campus Salto funciona nos seguintes horários: de segunda a sexta-feira, das 07:00 às 22:40, e aos sábados, das 08:00 às 18:30. O campus está fechado aos domingos. Esses horários são flexíveis, podendo ser ajustados conforme a demanda dos alunos e a programação de atividades.'
     },
     'facebook': {
@@ -76,10 +76,6 @@ const keywords = {
     'graduacao': {
         keywords: ['graduacao'],
         info: 'O IFSP Campus Salto oferece um total de cinco graduações. Entre os Bacharelados, estão disponíveis os cursos de Ciência da Computação e Engenharia de Controle e Automação. Na área de Licenciaturas, o campus oferece os cursos de Letras - Português e Matemática. Além disso, na categoria de Cursos Tecnológicos, está disponível o curso de Análise e Desenvolvimento de Sistemas. Se desejar mais informações, sinta-se à vontade para perguntar!'
-    },
-    'curso': {
-        keywords: ['curso', 'cursos', 'curs'],
-        info: 'O IFSP Campus Salto disponibiliza 4 cursos técnicos, 5 cursos de graduação e 3 cursos de pós-graduação.\n\nPara obter mais informações, faça a pergunta relativo ao curso técnico, como "Fale sobre o técnico em informática".'
     },
     'acesso_suap': {
         keywords: ['acesso suap'],
@@ -172,6 +168,38 @@ const keywords = {
     'sociopedagogica': {
         keywords: ['sociopedagogica', 'csp'],
         info: 'A Coordenadoria Sociopedagógica (CSP) do IFSP orienta e acompanha ações pedagógicas e psicossociais para melhorar o ensino-aprendizagem e a permanência dos alunos. Suas atividades incluem orientação educacional, assistência estudantil, apoio ao docente e combate à evasão. A CSP, composta por uma equipe interdisciplinar, está subordinada à Diretoria Adjunta Educacional. Para contato, utilize csp.slt@ifsp.edu.br ou ligue 4602-9194 (Ramal).'
+    },
+    'ifa': {
+        keywords: ['ifa'],
+        info: 'O Instrumento Final de Avaliação (IFA) é acessível aos alunos que mantêm uma frequência mínima de 75% e uma média entre 4 e 6 na disciplina. A nota do IFA prevalece sobre a média das avaliações anteriores, significando que, se a nota do IFA for superior, ela será a considerada para a avaliação final. Para mais informações, converse com o professor.'
+    },
+    'abono de faltas': {
+        keywords: ['abono de faltas'],
+        info: 'O abono de faltas é concedido em casos específicos, como declaração de corporação militar, participação em reuniões do CONAES, declaração do Diretor-Geral, atestado médico, certidão de óbito de parentes de primeiro grau ou cônjuge e solicitação judicial. O pedido deve ser feito à CRA em até dois dias úteis após o evento. Para afastamentos médicos superiores a 15 dias, é possível solicitar o Regime de Exercícios Domiciliares (RED).'
+    },
+    'aproveitamento de estudos': {
+        keywords: ['aproveitamento de estudos', 'dispensa de disciplina'],
+        info: 'O aluno pode solicitar o aproveitamento de estudos para dispensa de disciplinas, tanto em cursos técnicos quanto superiores, apresentando documentos como histórico escolar e ementa. O pedido deve ser feito na CRA, respeitando o calendário escolar, e o aluno deve cursar a disciplina até a aprovação.'
+    },
+    'cancelar matricula': {
+        keywords: ['cancelar matricula', 'cancelamento matricula'],
+        info: 'O aluno pode solicitar o cancelamento da matrícula a qualquer momento, tornando nulos todos os atos acadêmicos. É necessário preencher um requerimento na CRA, apresentar declaração de débito da biblioteca e realizar entrevista na Coordenadoria Sócio Pedagógica. O IFSP também pode cancelar matrículas compulsoriamente em certas situações.'
+    },
+    'trancamento de semestre': {
+        keywords: ['trancar semestre', 'trancamento de semestre', 'trancar matricula', 'trancamento matricula', 'trancar curso', 'trancamento curso'],
+        info: 'O estudante pode requerer o trancamento de matrícula a partir do segundo período letivo, interrompendo os estudos por até um período letivo em cursos anuais ou dois em cursos semestrais.'
+    },
+    'frequencia necessaria': {
+        keywords: ['frequencia necessaria', 'quanto frequencia', 'frequencia obrigatoria'],
+        info: 'A frequência às aulas e atividades escolares é obrigatória, com um mínimo de 75% para aprovação.'
+    },
+    'rematricula': {
+        keywords: ['rematricula'],
+        info: 'A rematrícula deve ser renovada a cada semestre letivo por meio do Requerimento de Rematrícula, formalizando a continuidade no curso. O pedido deve ser feito na CRE dentro do prazo estipulado no Calendário Escolar.'
+    },
+    'curso': {
+        keywords: ['curso', 'cursos', 'curs'],
+        info: 'O IFSP Campus Salto disponibiliza 4 cursos técnicos, 5 cursos de graduação e 3 cursos de pós-graduação.\n\nPara obter mais informações, faça a pergunta relativo ao curso técnico, como "Fale sobre o técnico em informática".'
     },
 
     //IFSP
@@ -453,9 +481,50 @@ const keywords = {
     'professora_vania': {
         keywords: ['professora vania'],
         info: 'A professora Vânia Gomes atua na área de Educação Básica e atende às quartas-feiras, das 9h30 às 10h30. Para contato, envie um e-mail para vania.gomes@ifsp.edu.br.'
-    }
-};
+    },
 
+    // INTERAÇÕES
+    'saudacao': {
+        keywords: ['oi', 'ola', 'alo', 'e ai', 'eai', 'salve'],
+        info: 'Olá! Como posso ajudar você hoje?'
+    },
+    'despedida': {
+        keywords: ['tchau', 'ate logo', 'adeus', 'falou'],
+        info: 'Até mais! Estou aqui sempre que precisar. Tenha um ótimo dia!'
+    },
+    'como_voce': {
+        keywords: ['como voce esta', 'tudo bem', 'como vai', 'como voce tá'],
+        info: 'Estou aqui para ajudar! E você, como está hoje?'
+    },
+    'sobre_mim': {
+        keywords: ['sobre voce', 'quem e'],
+        info: 'Sou uma IA aqui para ajudar com informações sobre o IFSP Campus Salto e responder suas perguntas. O que você gostaria de saber?'
+    },
+    'curiosidade': {
+        keywords: ['curiosidade', 'sabe algo interessante?'],
+        info: 'Você sabia que o IFSP Campus Salto foi inaugurado em 2014? Desde então, vem se destacando na formação técnica e superior!'
+    },
+    'agradecimento': {
+        keywords: ['obrigado', 'valeu', 'agradeço'],
+        info: 'De nada! Fico feliz em ajudar. Se precisar de mais alguma coisa, é só avisar!'
+    },
+    'perguntar_nome': {
+        keywords: ['qual e seu nome?', 'como voce se chama'],
+        info: 'Eu sou uma inteligência artificial sem nome, mas você pode me chamar de CHAT IFSP. E você, como se chama?'
+    },
+    'elogio': {
+        keywords: ['você e legal', 'gosto de voce', 'voce e util'],
+        info: 'Agradeço o elogio! Estou aqui para tornar sua experiência a melhor possível.'
+    },
+    'pergunta_hora': {
+        keywords: ['que horas sao'],
+        info: 'Desculpe, não consigo verificar a hora no momento, mas você pode dar uma olhada no seu relógio!'
+    },
+    'piada': {
+        keywords: ['me conte uma piada', 'piada', 'algo engracado'],
+        info: 'Por que o computador foi ao médico? Porque ele tinha um vírus!'
+    },
+};
 
 // Função para buscar a resposta
 function searchKeywords(keywords, question) {
@@ -500,9 +569,9 @@ function startAnimation() {
 
     // Intervalo para mudar a imagem do robô
     animationInterval = setInterval(() => {
-        imageIndex = (imageIndex + 1) % 5; // Alterna entre 0 e 4
+        imageIndex = (imageIndex + 1) % 10; // Alterna entre 0 e 9
         roboImage.src = `robo${imageIndex + 1}.png`; // Atualiza a imagem do robô
-    }, 200); // Muda a imagem a cada 200ms
+    }, 70); // Muda a imagem a cada 200ms
 }
 
 function stopAnimation() {
@@ -511,16 +580,7 @@ function stopAnimation() {
     roboImage.src = 'robo1.png'; // Reseta a imagem para o robô inicial
 }
 
-function speak(text) {
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'pt-BR';
-    utterance.rate = 1.3;
-
-    // Quando a fala terminar, parar a animação
-    utterance.onend = () => {
-        stopAnimation(); // Certifica-se de que a animação seja parada
-    };
-
+function setupVoice(utterance) {
     let voices = window.speechSynthesis.getVoices();
 
     // Se as vozes ainda não foram carregadas
@@ -536,6 +596,24 @@ function speak(text) {
         utterance.voice = preferredVoice;
         window.speechSynthesis.speak(utterance);
     }
+}
+
+function speak(text) {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'pt-BR';
+    utterance.rate = 1.3;
+
+    // Quando a fala terminar, parar a animação
+    utterance.onend = () => {
+        stopAnimation(); // Certifica-se de que a animação seja parada
+    };
+
+    utterance.onerror = (event) => {
+        console.error('Erro na síntese de fala:', event.error);
+        stopAnimation(); // Para a animação em caso de erro
+    };
+
+    setupVoice(utterance);
 }
 
 let recognition;
@@ -558,7 +636,6 @@ if ('webkitSpeechRecognition' in window) {
         getAnswer(); 
     };
     
-
     // Evento disparado quando a gravação é iniciada
     recognition.onstart = function() {
         micButton.classList.add('listening');
