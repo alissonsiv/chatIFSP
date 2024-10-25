@@ -2,35 +2,27 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     text-align: center;
-    padding: 50px;
+    padding: 20px;
 }
 
 #header {
     margin-bottom: 20px;
-    text-align: center; /* Centraliza os itens dentro do cabeçalho */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #logo-image {
-    width: 300px; /* Ajuste a largura do logo conforme necessário */
-    margin-bottom: 10px; /* Espaçamento abaixo do logo */
+    width: 80%; 
+    max-width: 300px; 
+    margin-bottom: 10px;
 }
 
 #robo-image {
-    width: 650px; /* Largura do robô */
-    margin-top: -60px; /* Espaçamento acima do robô */
-}
-
-@keyframes talk {
-    0%, 100% {
-        transform: scale(1); 
-    }
-    50% {
-        transform: scale(1.2); 
-    }
-}
-
-#robo-image.talk {
-    animation: talk 1s ease-in-out infinite; /* Duração de 1 segundo e animação contínua */
+    width: 100%; 
+    max-width: 650px;
+    margin-top: -60px;
 }
 
 #container {
@@ -43,15 +35,15 @@ body {
     margin-top: -20px;
 }
 
-input[type="text"] {
+input[type="text"], #question {
     padding: 10px;
-    width: 80%;
+    width: 70%;
+    max-width: 400px;
     border-radius: 4px;
     border: 1px solid #ccc;
-    margin-bottom: 10px;
 }
 
-button {
+button, #mic-button {
     padding: 10px 20px;
     border-radius: 4px;
     border: none;
@@ -60,54 +52,20 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #218838;
+#robo-image.talk {
+    animation: talk 1s ease-in-out infinite;
 }
 
-#response {
-    margin-top: 20px;
-    font-size: 1.2em;
-}
-
-#input-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#question {
-    padding: 10px;
-    width: 80%;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
-}
-
-#mic-button {
-    padding: 7px;
-    font-size: 20px;
-    background-color: #28a745;
-    color: white;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
-    top: -5px; /* Move o botão 10px para cima */
-}
-
-#mic-button.listening {
-    background-color: red;
-    animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
+@media (max-width: 768px) {
+    #logo-image, #robo-image {
+        width: 100%;
     }
-    50% {
-        transform: scale(1.2);
+
+    #input-container {
+        flex-direction: column; 
     }
-    100% {
-        transform: scale(1);
+
+    #mic-button {
+        margin-top: 10px;
     }
 }
