@@ -76,10 +76,6 @@ const keywords = {
         keywords: ['tecnico'],
         info: 'O IFSP Campus Salto oferece os seguintes cursos técnicos: Informática para Internet, Mecatrônica, Administração EAD e Automação Industrial. Os cursos são disponibilizados nas modalidades integrados ao Ensino Médio e concomitantes ou subsequentes.\n\nPara mais informações, pergunte sobre o curso técnico desejado, como por exemplo: "Fale sobre o curso técnico em Informática."'
     },
-    'graduacao': {
-        keywords: ['graduacao', 'bacharelados', 'licenciaturas'],
-        info: 'O IFSP Campus Salto oferece um total de cinco graduações. Entre os Bacharelados, estão disponíveis os cursos de Ciência da Computação e Engenharia de Controle e Automação. Na área de Licenciaturas, o campus oferece os cursos de Letras - Português e Matemática. Além disso, na categoria de Cursos Tecnológicos, está disponível o curso de Análise e Desenvolvimento de Sistemas. Se desejar mais informações, sinta-se à vontade para perguntar!'
-    },
     'acesso_suap': {
         keywords: ['acesso suap', 'login suap', 'acessar suap'],
         info: 'Para entrar no SUAP em casos gerais, digite suap.ifsp.edu.br na barra de endereço do navegador. Na tela de login, insira seu CPF e a senha previamente definida. Após isso, clique em "Acessar" para entrar no sistema. Se você for um novo usuário, siga os seguintes passos: Na tela de login, clique em "Primeiro acesso". Indique sua matrícula e CPF, marcando a caixa "Não sou um robô", e clique em "Enviar". Você receberá um link por e-mail para definir sua senha. Para acessos futuros, entre na mesma página, insira seu CPF e senha, e clique em "Acessar".'
@@ -127,6 +123,10 @@ const keywords = {
     'matematica_critica': {
         keywords: ['matematica critica'],
         info: 'A Pós-graduação Lato Sensu em Educação Matemática: Crítica e Sociedade forma profissionais críticos para atuar na Educação Básica e Superior. O ingresso ocorre por processo seletivo, com início das aulas em abril de 2024. O curso tem duração de 3 semestres, é presencial no turno noturno e oferece 30 vagas.'
+    },
+    'graduacao': {
+        keywords: ['graduacao', 'bacharelados', 'licenciaturas'],
+        info: 'O IFSP Campus Salto oferece um total de cinco graduações. Entre os Bacharelados, estão disponíveis os cursos de Ciência da Computação e Engenharia de Controle e Automação. Na área de Licenciaturas, o campus oferece os cursos de Letras - Português e Matemática. Além disso, na categoria de Cursos Tecnológicos, está disponível o curso de Análise e Desenvolvimento de Sistemas. Se desejar mais informações, sinta-se à vontade para perguntar!'
     },
     'cae': {
         keywords: ['cae', 'apoio ao ensino', 'suporte pedagógico'],
@@ -542,11 +542,11 @@ const keywords = {
         info: 'O professor Fabio de Paula Santos atua na área de Informática.'
     },
     'professor fabio lumertz email': {
-        keywords: ['professor fabio lumertz email', 'email professor fabio lumertz', 'contato fabio lumertz'],
+        keywords: ['professor lumertz email', 'email lumertz', 'contato lumertz'],
         info: 'O email do professor Fábio Lumertz Garcia é fabiolumertz@ifsp.edu.br.'
     },
     'professor fabio lumertz horario': {
-        keywords: ['professor fabio lumertz horario', 'horario fabio lumertz', 'atendimento fabio lumertz'],
+        keywords: ['professor lumertz horario', 'horario fabio lumertz', 'atendimento fabio lumertz'],
         info: 'O professor Fábio Lumertz Garcia está disponível para atendimento às quartas-feiras, das 14h00 às 16h00, mediante agendamento por e-mail, e pode ser realizado na sala dos professores ou no Lab 215.'
     },
     'professor fabio lumertz': {
@@ -1032,8 +1032,8 @@ const keywords = {
         info: 'De nada! Fico feliz em ajudar. Se precisar de mais alguma coisa, é só avisar!'
     },
     'perguntar_nome': {
-        keywords: ['como voce se chama', 'seu nome', 'como posso te chamar', 'quem é você'],
-        info: 'Meu nome é Megatron! E você, como se chama?'
+        keywords: ['como se chama', 'seu nome', 'como posso te chamar', 'quem é você'],
+        info: 'Meu nome é Megatron 😎! E você, como se chama?'
     },
     'elogio': {
         keywords: ['você e legal', 'gosto de voce', 'você é util', 'bom trabalho'],
