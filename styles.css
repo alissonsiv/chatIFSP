@@ -1,3 +1,4 @@
+/* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -5,6 +6,7 @@ body {
     padding: 20px;
 }
 
+/* Cabeçalho */
 #header {
     margin-bottom: 20px;
     text-align: center;
@@ -13,6 +15,7 @@ body {
     align-items: center;
 }
 
+/* Imagens do Cabeçalho */
 #logo-image {
     width: 80%; 
     max-width: 300px; 
@@ -25,6 +28,7 @@ body {
     margin-top: -60px;
 }
 
+/* Container Principal */
 #container {
     background-color: #fff;
     border-radius: 8px;
@@ -35,17 +39,18 @@ body {
     margin-top: -20px;
 }
 
+/* Estilos de Entrada */
 input[type="text"] {
     padding: 10px;
-    width: calc(100% - 20px);
+    width: 400px; 
     border-radius: 4px;
     border: 1px solid #ccc;
-    box-sizing: border-box;
 }
 
+/* Botões */
 button {
-    padding: 10px 20px;
-    border-radius: 4px;
+    padding: 10px 20px; 
+    border-radius: 4px; 
     border: none;
     background-color: #28a745;
     color: white;
@@ -68,9 +73,10 @@ button {
 
 #mic-button.listening {
     background-color: #ff0000; 
-    animation: pulse 0.5s infinite; 
+    animation: pulse 0.5s infinite;
 }
 
+/* Animações */
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -83,20 +89,14 @@ button {
     }
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
     #logo-image, #robo-image {
         width: 100%;
     }
 
     #input-container {
-        display: flex;
         flex-direction: column; 
-        width: 100%;
-    }
-
-    input[type="text"] {
-        width: 100%;
-        margin-bottom: 10px;
     }
 
     #mic-button {

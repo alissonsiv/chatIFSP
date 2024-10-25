@@ -1,3 +1,4 @@
+// Função para remover acentos
 function removeAccents(str) {
     return str.normalize('NFD')
               .replace(/[\u0300-\u036f]/g, '') 
@@ -5,6 +6,7 @@ function removeAccents(str) {
               .replace(/[.,?!;(){}[\]"']/g, ''); 
 }
 
+// Estrutura de palavras-chave e informações
 const keywords = {
     'endereco': {
         keywords: ['endereco', 'local', 'localizacao', 'onde fica', 'como chegar', 'localidade'],
@@ -1051,8 +1053,8 @@ const keywords = {
     },
 };
 
+// Função para buscar palavras-chave na pergunta
 function searchKeywords(keywords, question) {
-    let found = null;
     const normalizedQuestion = removeAccents(question.toLowerCase());
     const questionWords = normalizedQuestion.split(' ');
 
@@ -1066,58 +1068,40 @@ function searchKeywords(keywords, question) {
             }
         }
     }
-    return found;
+    return null; // Retorna null se não encontrar resposta
 }
 
+// Funções para animação do robô
 let imageIndex = 0;
 let animationInterval;
-
-function getAnswer() {
-    const question = removeAccents(document.getElementById('question').value.toLowerCase());
-    let response = searchKeywords(keywords, question);
-
-    if (!response) {
-        response = 'Desculpe, não tenho uma resposta para isso.';
-    }
-
-    window.speechSynthesis.cancel();
-
-    document.getElementById('response').innerText = response;
-
-    resetAnimation();
-    speak(response);
-}
 
 function startAnimation() {
     const roboImage = document.getElementById('robo-image');
     animationInterval = setInterval(() => {
         imageIndex = (imageIndex + 1) % 10;
-        roboImage.src = `robo${imageIndex + 1}.png`;
+        roboImage.src = `imagens/robo/robo${imageIndex + 1}.png`; // Atualizado o caminho
     }, 70);
 }
 
 function stopAnimation() {
-    clearInterval(animationInterval); 
-    imageIndex = 0; 
+    clearInterval(animationInterval);
     const roboImage = document.getElementById('robo-image');
-    roboImage.src = `robo${imageIndex + 1}.png`;
+    roboImage.src = `imagens/robo/robo.png`;  
 }
 
 function resetAnimation() {
     stopAnimation(); 
-    startAnimation(); 
+    startAnimation();
 }
 
+// Função para falar a resposta
 function speak(text, rate = 2, pitch = 1) {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'pt-BR';
     utterance.rate = rate;
     utterance.pitch = pitch;
 
-    utterance.onend = () => {
-        stopAnimation();
-    };
-
+    utterance.onend = stopAnimation;
     utterance.onerror = (event) => {
         console.error('Erro na síntese de fala:', event.error);
         stopAnimation();
@@ -1130,6 +1114,23 @@ function speak(text, rate = 2, pitch = 1) {
     window.speechSynthesis.speak(utterance);
 }
 
+// Função principal para obter a resposta
+function getAnswer() {
+    const question = removeAccents(document.getElementById('question').value.toLowerCase());
+    let response = searchKeywords(keywords, question);
+
+    if (!response) {
+        response = 'Desculpe, não tenho uma resposta para isso.';
+    }
+
+    window.speechSynthesis.cancel();
+    document.getElementById('response').innerText = response;
+
+    resetAnimation();
+    speak(response);
+}
+
+// Configuração do reconhecimento de fala
 let recognition;
 const micButton = document.getElementById('mic-button');
 const questionInput = document.getElementById('question');
@@ -1157,6 +1158,7 @@ if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
     alert('Seu navegador não suporta a Web Speech API');
 }
 
+// Evento para o botão do microfone
 micButton.addEventListener('click', () => {
     if (recognition) {
         recognition.start();
