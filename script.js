@@ -1033,7 +1033,7 @@ const keywords = {
     },
     'perguntar_nome': {
         keywords: ['como voce se chama', 'seu nome', 'como posso te chamar', 'quem é você'],
-        info: 'Eu sou uma inteligência artificial sem nome, mas você pode me chamar de CHAT IFSP. E você, como se chama?'
+        info: 'Meu nome é Megatron! E você, como se chama?'
     },
     'elogio': {
         keywords: ['você e legal', 'gosto de voce', 'você é util', 'bom trabalho'],
@@ -1124,7 +1124,7 @@ function setupVoice(utterance) {
 function speak(text) {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'pt-BR';
-    utterance.rate = 1.3;
+    utterance.rate = 1.9;
 
     // Quando a fala terminar, parar a animação
     utterance.onend = () => {
