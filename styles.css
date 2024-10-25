@@ -37,37 +37,38 @@ body {
 
 input[type="text"] {
     padding: 10px;
-    width: 400px; /* Aumentar a largura da caixa de entrada */
+    width: calc(100% - 20px);
     border-radius: 4px;
     border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 button {
-    padding: 10px 20px; /* Botão de enviar */
-    border-radius: 4px; /* Cantos arredondados */
+    padding: 10px 20px;
+    border-radius: 4px;
     border: none;
-    background-color: #28a745; /* Cor padrão */
+    background-color: #28a745;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s; /* Efeito de transição para a cor */
+    transition: background-color 0.3s;
 }
 
 #mic-button {
-    padding: 0; /* Remover espaçamento interno */
-    width: 40px; /* Largura menor para o botão redondo */
-    height: 40px; /* Altura menor para o botão redondo */
-    border-radius: 50%; /* Botão do microfone redondo */
+    padding: 0; 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
     border: none;
-    background-color: #28a745; /* Cor padrão */
+    background-color: #28a745;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s; /* Efeito de transição para a cor */
-    margin-left: 10px; /* Afastar ainda mais para a direita */
+    transition: background-color 0.3s; 
+    margin-left: 10px; 
 }
 
 #mic-button.listening {
-    background-color: #ff0000; /* Cor quando gravando */
-    animation: pulse 0.5s infinite; /* Animação de pulsação */
+    background-color: #ff0000; 
+    animation: pulse 0.5s infinite; 
 }
 
 @keyframes pulse {
@@ -88,10 +89,17 @@ button {
     }
 
     #input-container {
+        display: flex;
         flex-direction: column; 
+        width: 100%;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     #mic-button {
-        margin-top: 20px; /* Afastar o botão do microfone do campo de entrada */
+        margin-top: 20px; 
     }
 }

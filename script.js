@@ -1,4 +1,3 @@
-// Função para remover acentos, substituir "ç" por "c" e remover pontuações
 function removeAccents(str) {
     return str.normalize('NFD')
               .replace(/[\u0300-\u036f]/g, '') 
@@ -6,7 +5,6 @@ function removeAccents(str) {
               .replace(/[.,?!;(){}[\]"']/g, ''); 
 }
 
-// Estrutura de dados para as respostas
 const keywords = {
     'endereco': {
         keywords: ['endereco', 'local', 'localizacao', 'onde fica', 'como chegar', 'localidade'],
@@ -1053,7 +1051,6 @@ const keywords = {
     },
 };
 
-// Função para buscar a resposta
 function searchKeywords(keywords, question) {
     let found = null;
     const normalizedQuestion = removeAccents(question.toLowerCase());
@@ -1100,18 +1097,18 @@ function startAnimation() {
 }
 
 function stopAnimation() {
-    clearInterval(animationInterval); // Para a animação
-    imageIndex = 0; // Reinicia o índice da imagem
+    clearInterval(animationInterval); 
+    imageIndex = 0; 
     const roboImage = document.getElementById('robo-image');
-    roboImage.src = `robo${imageIndex + 1}.png`; // Redefine a imagem para a inicial
+    roboImage.src = `robo${imageIndex + 1}.png`;
 }
 
 function resetAnimation() {
-    stopAnimation(); // Para a animação atual
-    startAnimation(); // Inicia a nova animação
+    stopAnimation(); 
+    startAnimation(); 
 }
 
-function speak(text, rate = 3.4, pitch = 1) {
+function speak(text, rate = 2, pitch = 1) {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'pt-BR';
     utterance.rate = rate;
@@ -1133,7 +1130,6 @@ function speak(text, rate = 3.4, pitch = 1) {
     window.speechSynthesis.speak(utterance);
 }
 
-// Configuração para iniciar o reconhecimento de voz se suportado
 let recognition;
 const micButton = document.getElementById('mic-button');
 const questionInput = document.getElementById('question');
