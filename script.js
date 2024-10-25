@@ -1083,8 +1083,11 @@ function getAnswer() {
         response = 'Desculpe, não tenho uma resposta para isso.';
     }
 
+    window.speechSynthesis.cancel();
+
     document.getElementById('response').innerText = response;
-    startAnimation();
+
+    resetAnimation();
     speak(response);
 }
 
@@ -1097,9 +1100,15 @@ function startAnimation() {
 }
 
 function stopAnimation() {
-    clearInterval(animationInterval);
+    clearInterval(animationInterval); // Para a animação
+    imageIndex = 0; // Reinicia o índice da imagem
     const roboImage = document.getElementById('robo-image');
-    roboImage.src = 'robo1.png';
+    roboImage.src = `robo${imageIndex + 1}.png`; // Redefine a imagem para a inicial
+}
+
+function resetAnimation() {
+    stopAnimation(); // Para a animação atual
+    startAnimation(); // Inicia a nova animação
 }
 
 function speak(text, rate = 3.4, pitch = 1) {
@@ -1157,4 +1166,3 @@ micButton.addEventListener('click', () => {
         recognition.start();
     }
 });
-
