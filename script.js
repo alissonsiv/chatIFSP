@@ -1047,6 +1047,10 @@ const keywords = {
         keywords: ['me conte uma piada', 'piada'],
         info: 'Por que o computador foi ao médico? Porque ele tinha um vírus!'
     },
+    'teste': {
+        keywords: ['teste', 'testando', 'testar'],
+        info: 'Teste! Teste! 1, 2, 3... Alô, alô! Está tudo funcionando perfeitamente por aqui! O que mais posso fazer por você hoje?'
+    },
 };
 
 // Função para buscar a resposta
@@ -1068,8 +1072,8 @@ function searchKeywords(keywords, question) {
     return found;
 }
 
-let imageIndex = 0; // Índice da imagem do robô
-let animationInterval; // Variável para armazenar o intervalo da animação
+let imageIndex = 0;
+let animationInterval;
 
 function getAnswer() {
     const question = removeAccents(document.getElementById('question').value.toLowerCase());
@@ -1080,107 +1084,77 @@ function getAnswer() {
     }
 
     document.getElementById('response').innerText = response;
-
-    // Inicia a animação do robô
     startAnimation();
-
     speak(response);
 }
 
 function startAnimation() {
     const roboImage = document.getElementById('robo-image');
-
-    // Intervalo para mudar a imagem do robô
     animationInterval = setInterval(() => {
-        imageIndex = (imageIndex + 1) % 10; // Alterna entre 0 e 9
-        roboImage.src = `robo${imageIndex + 1}.png`; // Atualiza a imagem do robô
-    }, 70); // Muda a imagem a cada 200ms
+        imageIndex = (imageIndex + 1) % 10;
+        roboImage.src = `robo${imageIndex + 1}.png`;
+    }, 70);
 }
 
 function stopAnimation() {
-    clearInterval(animationInterval); // Para a animação
+    clearInterval(animationInterval);
     const roboImage = document.getElementById('robo-image');
-    roboImage.src = 'robo1.png'; // Reseta a imagem para o robô inicial
+    roboImage.src = 'robo1.png';
 }
 
-function setupVoice(utterance) {
-    let voices = window.speechSynthesis.getVoices();
-
-    // Se as vozes ainda não foram carregadas
-    if (!voices.length) {
-        window.speechSynthesis.onvoiceschanged = () => {
-            voices = window.speechSynthesis.getVoices();
-            const preferredVoice = voices.find(voice => voice.lang === 'pt-BR' && voice.name.includes('Google')) || voices[0];
-            utterance.voice = preferredVoice;
-            window.speechSynthesis.speak(utterance);
-        };
-    } else {
-        const preferredVoice = voices.find(voice => voice.lang === 'pt-BR' && voice.name.includes('Google')) || voices[0];
-        utterance.voice = preferredVoice;
-        window.speechSynthesis.speak(utterance);
-    }
-}
-
-function speak(text) {
+function speak(text, rate = 3.4, pitch = 1) {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'pt-BR';
-    utterance.rate = 1.9;
+    utterance.rate = rate;
+    utterance.pitch = pitch;
 
-    // Quando a fala terminar, parar a animação
     utterance.onend = () => {
-        stopAnimation(); // Certifica-se de que a animação seja parada
+        stopAnimation();
     };
 
     utterance.onerror = (event) => {
         console.error('Erro na síntese de fala:', event.error);
-        stopAnimation(); // Para a animação em caso de erro
+        stopAnimation();
     };
 
-    setupVoice(utterance);
+    const voices = window.speechSynthesis.getVoices();
+    const preferredVoice = voices.find(voice => voice.lang === 'pt-BR') || voices[0];
+    utterance.voice = preferredVoice;
+
+    window.speechSynthesis.speak(utterance);
 }
 
+// Configuração para iniciar o reconhecimento de voz se suportado
 let recognition;
 const micButton = document.getElementById('mic-button');
 const questionInput = document.getElementById('question');
 
-// Verifica se o navegador suporta a Web Speech API
-if ('webkitSpeechRecognition' in window) {
-    recognition = new webkitSpeechRecognition();
+if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    recognition = new SpeechRecognition();
     recognition.lang = 'pt-BR';
     recognition.continuous = false;
     recognition.interimResults = false;
 
-    // Evento disparado quando a fala é reconhecida
-    recognition.onresult = function(event) {
+    recognition.onresult = (event) => {
         const speechResult = event.results[0][0].transcript;
         questionInput.value = speechResult;
-    
-        // Chama a função para buscar a resposta automaticamente
-        getAnswer(); 
-    };
-    
-    // Evento disparado quando a gravação é iniciada
-    recognition.onstart = function() {
-        micButton.classList.add('listening');
+        getAnswer();
     };
 
-    // Evento disparado quando a gravação é finalizada
-    recognition.onend = function() {
-        micButton.classList.remove('listening');
-    };
-
-    // Evento para lidar com erros
-    recognition.onerror = function(event) {
-        alert('Erro ao reconhecer a fala: ' + event.error);
+    recognition.onstart = () => micButton.classList.add('listening');
+    recognition.onend = () => micButton.classList.remove('listening');
+    recognition.onerror = (event) => {
+        console.error('Erro no reconhecimento de fala:', event.error);
         micButton.classList.remove('listening');
     };
 } else {
     alert('Seu navegador não suporta a Web Speech API');
 }
 
-// Função para iniciar ou parar o reconhecimento de fala
-micButton.addEventListener('click', function() {
+micButton.addEventListener('click', () => {
     if (recognition) {
         recognition.start();
     }
 });
+

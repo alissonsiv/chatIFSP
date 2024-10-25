@@ -35,25 +35,51 @@ body {
     margin-top: -20px;
 }
 
-input[type="text"], #question {
+input[type="text"] {
     padding: 10px;
-    width: 70%;
-    max-width: 400px;
+    width: 400px; /* Aumentar a largura da caixa de entrada */
     border-radius: 4px;
     border: 1px solid #ccc;
 }
 
-button, #mic-button {
-    padding: 10px 20px;
-    border-radius: 4px;
+button {
+    padding: 10px 20px; /* Botão de enviar */
+    border-radius: 4px; /* Cantos arredondados */
     border: none;
-    background-color: #28a745;
+    background-color: #28a745; /* Cor padrão */
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s; /* Efeito de transição para a cor */
 }
 
-#robo-image.talk {
-    animation: talk 1s ease-in-out infinite;
+#mic-button {
+    padding: 0; /* Remover espaçamento interno */
+    width: 40px; /* Largura menor para o botão redondo */
+    height: 40px; /* Altura menor para o botão redondo */
+    border-radius: 50%; /* Botão do microfone redondo */
+    border: none;
+    background-color: #28a745; /* Cor padrão */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Efeito de transição para a cor */
+    margin-left: 10px; /* Afastar ainda mais para a direita */
+}
+
+#mic-button.listening {
+    background-color: #ff0000; /* Cor quando gravando */
+    animation: pulse 0.5s infinite; /* Animação de pulsação */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 @media (max-width: 768px) {
@@ -66,6 +92,6 @@ button, #mic-button {
     }
 
     #mic-button {
-        margin-top: 10px;
+        margin-top: 20px; /* Afastar o botão do microfone do campo de entrada */
     }
 }
