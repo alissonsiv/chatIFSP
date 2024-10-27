@@ -1164,3 +1164,26 @@ micButton.addEventListener('click', () => {
         recognition.start();
     }
 });
+
+// Aguarda o carregamento completo do DOM
+document.addEventListener('DOMContentLoaded', () => {
+    // Seleciona o botão de modo escuro e a imagem do logo
+    const toggleDarkModeButton = document.getElementById('dark-mode-button'); // Corrigido para o ID correto
+    const logoImage = document.getElementById('logo-image');
+
+    // Adiciona um evento de clique ao botão de modo escuro
+    toggleDarkModeButton.addEventListener('click', () => {
+        // Alterna a classe 'dark-mode' no corpo do documento
+        document.body.classList.toggle('dark-mode');
+
+        // Altera o ícone do botão e a imagem do logo com base no estado do modo escuro
+        if (document.body.classList.contains('dark-mode')) {
+            toggleDarkModeButton.textContent = '🌜'; // Ícone de lua para modo escuro
+            logoImage.src = 'imagens/logo/logo2.png'; 
+        } else {
+            toggleDarkModeButton.textContent = '🌞'; // Ícone de sol para modo claro
+            logoImage.src = 'imagens/logo/logo.png'; 
+        }
+    });
+});
+
