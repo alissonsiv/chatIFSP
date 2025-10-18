@@ -51,6 +51,44 @@ function adicionarMensagem(texto, classe) {
     if (classe === 'bot' && audioAtivo) falarTexto(texto);
 }
 
+// ======== CARREGAMENTO MODERNO COM ANIMAÇÃO DO BONECO ========
+function adicionarMensagemCarregando() {
+    if (primeiraMensagem) {
+        areaMensagens.classList.remove('oculta');
+        primeiraMensagem = false;
+    }
+
+    const div = document.createElement('div');
+    div.classList.add('mensagem', 'bot');
+    div.id = 'loading-msg';
+
+    // Boneco animado
+    const imagemBot = document.createElement('img');
+    imagemBot.src = '../images/megatron.png';
+    imagemBot.alt = 'Megatron';
+    imagemBot.classList.add('imagem-bot', 'animando-bot');
+
+    // Bolinhas de carregamento
+    const loadingContainer = document.createElement('div');
+    loadingContainer.classList.add('loading-dots');
+
+    for (let i = 0; i < 3; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        loadingContainer.appendChild(dot);
+    }
+
+    div.appendChild(imagemBot);
+    div.appendChild(loadingContainer);
+    areaMensagens.appendChild(div);
+    areaMensagens.scrollTop = areaMensagens.scrollHeight;
+}
+
+function removerMensagemCarregando() {
+    const div = document.getElementById('loading-msg');
+    if (div) div.remove();
+}
+
 // ======== SÍNTESE DE VOZ ========
 function falarTexto(texto) {
     const utterance = new SpeechSynthesisUtterance(texto);
@@ -86,7 +124,10 @@ botaoEnviar.addEventListener('click', async () => {
     adicionarMensagem(texto, 'usuario');
     campoInput.value = '';
 
+    adicionarMensagemCarregando(); // mostra carregamento
     const resposta = await enviarPergunta(texto);
+    removerMensagemCarregando(); // remove carregamento
+
     adicionarMensagem(resposta, 'bot');
 });
 

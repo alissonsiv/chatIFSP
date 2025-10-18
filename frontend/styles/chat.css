@@ -240,3 +240,65 @@ body {
   width: 18px;
   filter: invert(1);
 }
+
+.loading-dots {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.loading-dots .dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--verde-claro);
+  border-radius: 50%;
+  opacity: 0;
+  animation: blink 1.4s infinite both;
+}
+
+.loading-dots .dot:nth-child(1) { animation-delay: 0s; }
+.loading-dots .dot:nth-child(2) { animation-delay: 0.2s; }
+.loading-dots .dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes blink {
+  0%, 80%, 100% { opacity: 0; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-3px); }
+}
+
+/* Animação do boneco enquanto "pensa" */
+@keyframes balancar {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+}
+
+.animando-bot {
+  animation: balancar 1s infinite;
+  transform-origin: bottom center;
+}
+
+/* Pontinhos de carregamento */
+.loading-dots {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.loading-dots .dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--verde-claro);
+  border-radius: 50%;
+  opacity: 0;
+  animation: blink 1.4s infinite both;
+}
+
+.loading-dots .dot:nth-child(1) { animation-delay: 0s; }
+.loading-dots .dot:nth-child(2) { animation-delay: 0.2s; }
+.loading-dots .dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes blink {
+  0%, 80%, 100% { opacity: 0; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-3px); }
+}

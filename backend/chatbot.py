@@ -56,6 +56,7 @@ def perguntar_ia(pergunta):
     prompt = (
         f"Você é um assistente virtual especializado no IFSP Campus Salto. "
         f"Responda de forma concisa e objetiva a qualquer pergunta sobre o campus, fornecendo respostas completas diretamente relacionadas. "
+        f"Use frases naturais, sem símbolos ou caracteres especiais, apenas letras e acentos normais. "
         f"Contexto: {contexto_campus} "
         f"Pergunta: {pergunta}"
     )
