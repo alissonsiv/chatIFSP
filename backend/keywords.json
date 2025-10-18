@@ -1,0 +1,1246 @@
+{
+  "endereco": {
+    "keywords": [
+      "endereco",
+      "local",
+      "localizacao",
+      "onde fica",
+      "como chegar",
+      "localidade"
+    ],
+    "info": "O IFSP Campus Salto está localizado na Av. dos Três Poderes, nº 375, no Residencial Central Parque, em Salto, São Paulo."
+  },
+  "telefone": {
+    "keywords": ["telefone", "contato", "número", "ligar"],
+    "info": "O telefone do IFSP Campus Salto é (11) 4602-9191, utilizado para atender a consultas e fornecer informações sobre cursos, inscrições e outros serviços oferecidos pela instituição."
+  },
+  "funcionamento": {
+    "keywords": [
+      "funcionamento",
+      "horas abre",
+      "expediente",
+      "horario de funcionamento",
+      "horario de atendimento",
+      "quando esta aberto"
+    ],
+    "info": "O IFSP Campus Salto funciona nos seguintes horarios: de segunda a sexta-feira, das 07:00 às 22:40, e aos sábados, das 08:00 às 18:30. O campus está fechado aos domingos. Esses horarios são flexíveis, podendo ser ajustados conforme a demanda dos alunos e a programação de atividades."
+  },
+  "facebook": {
+    "keywords": ["facebook salto", "facebook campus", "fb salto", "fb campus"],
+    "info": "O Facebook do Câmpus Salto é o IFSP Salto. Você pode acessá-lo pelo link: https://www.facebook.com/ifsp.salto/."
+  },
+  "instagram": {
+    "keywords": ["instagram salto", "instagram campus", "ig salto", "ig campus"],
+    "info": "O Instagram do Câmpus Salto é o @ifsp.salto. Você pode acessá-lo pelo link: https://www.instagram.com/ifsp.salto."
+  },
+  "informatica para internet": {
+    "keywords": ["informatica internet", "curso informatica"],
+    "info": "O curso Técnico em Informática para Internet forma profissionais capacitados para desenvolver sites, sistemas web, aplicativos e gerenciar redes e servidores. É oferecido em duas modalidades: integrado ao ensino médio, com duração de três anos, e subsequente, com duração de três semestres. O ingresso ocorre por processo seletivo. Para mais informações, acesse o site do IFSP Salto."
+  },
+  "mecatronica": {
+    "keywords": ["mecatronica"],
+    "info": "O Técnico em Mecatrônica é capacitado para atuar em automação, sistemas mecânicos, eletrônicos e manutenção de máquinas. O curso, integrado ao ensino médio, tem duração de 3 anos e entrada via processo seletivo. Para mais informações, acesse o site do IFSP Salto."
+  },
+  "automacao": {
+    "keywords": ["automacao"],
+    "info": "O curso Técnico em Automação Industrial capacita profissionais para desenvolver e gerenciar sistemas automatizados em processos industriais. É oferecido em duas modalidades: integrado ao ensino médio, com duração de três anos, e subsequente, com duração de três semestres. O ingresso ocorre por processo seletivo. Para mais informações, acesse o site do IFSP Salto."
+  },
+  "informatica": {
+    "keywords": ["informatica"],
+    "info": "O curso Técnico em Informática capacita profissionais para desenvolver, implementar e manter sistemas computacionais e redes. É oferecido em duas modalidades: integrado ao ensino médio, com duração de três anos, e subsequente, com duração de três semestres. O ingresso ocorre por processo seletivo. Para mais informações, acesse o site do IFSP Salto."
+  },
+  "administracao": {
+    "keywords": ["administracao"],
+    "info": "O curso Técnico em Administração é oferecido na modalidade EAD, capacitando profissionais para gerenciar e otimizar processos administrativos. É subsequente ao ensino médio, com duração de três semestres. O ingresso ocorre por processo seletivo. Para mais informações, acesse o site do IFSP Salto."
+  },
+  "ciencia da computacao": {
+    "keywords": ["ciencia da computacao"],
+    "info": "A graduação em Ciência da Computação forma profissionais capacitados para desenvolver soluções computacionais e atuar em diversas áreas da tecnologia. O curso tem duração de 4 anos, com aulas presenciais no período da manhã. A entrada é feita por meio do SISU (Sistema de Seleção Unificada), que utiliza as notas do Enem para selecionar candidatos. Para mais informações, visite o site da instituição."
+  },
+  "engenharia": {
+    "keywords": ["engenharia"],
+    "info": "O IFSP Campus Salto oferece a graduação em Engenharia de Controle e Automação, que forma profissionais qualificados para projetar, desenvolver e gerenciar sistemas automatizados em diversas indústrias. O curso tem duração de 5 anos, com aulas presenciais no período integral, predominantemente pela manhã. A entrada é realizada por meio do SISU (Sistema de Seleção Unificada), que utiliza as notas do Enem para selecionar candidatos. Para mais informações, visite o site da instituição."
+  },
+  "matematica": {
+    "keywords": ["matematica"],
+    "info": "A graduação em Matemática forma profissionais capacitados para atuar em diversas áreas, incluindo pesquisa, ensino e setores que demandam análise quantitativa. O curso tem duração de 4 anos, com aulas presenciais no período noturno. A entrada é realizada por meio do SISU (Sistema de Seleção Unificada), que utiliza as notas do Enem para selecionar candidatos. Para mais informações, visite o site da instituição."
+  },
+  "portugues": {
+    "keywords": ["portugues", "letras"],
+    "info": "A graduação em Letras forma profissionais preparados para atuar na área de ensino de línguas e literatura, além de desenvolver habilidades de comunicação e análise crítica. O curso tem duração de 4 anos, com aulas presenciais no período noturno. A entrada é realizada por meio do SISU (Sistema de Seleção Unificada), que utiliza as notas do Enem para selecionar candidatos. Para mais informações, visite o site da instituição."
+  },
+  "ads": {
+    "keywords": [
+      "ads",
+      "sistemas",
+      "tecnologo",
+      "análise e desenvolvimento"
+    ],
+    "info": "O curso de Tecnólogo em Análise e Desenvolvimento de Sistemas (ADS) forma profissionais capacitados para atuar no desenvolvimento de software e gerenciamento de sistemas computacionais. O curso tem duração de 5 semestres, com aulas presenciais no período noturno. A entrada é realizada por meio do SISU (Sistema de Seleção Unificada), que utiliza as notas do Enem para selecionar candidatos. Para mais informações, visite o site da instituição."
+  },
+  "tecnico": {
+    "keywords": ["tecnico", "cursos tecnicos"],
+    "info": "O IFSP Campus Salto oferece os seguintes cursos técnicos: Informática para Internet, Mecatrônica, Administração EAD e Automação Industrial. Os cursos são disponibilizados nas modalidades integrados ao Ensino Médio e concomitantes ou subsequentes."
+  },
+  "acesso_suap": {
+    "keywords": ["acesso suap", "login suap", "acessar suap"],
+    "info": "Para entrar no SUAP em casos gerais, digite suap.ifsp.edu.br na barra de endereço do navegador. Na tela de login, insira seu CPF e a senha previamente definida. Após isso, clique em \"Acessar\" para entrar no sistema. Se você for um novo usuário, siga os seguintes passos: Na tela de login, clique em \"Primeiro acesso\". Indique sua matrícula e CPF, marcando a caixa \"Não sou um robô\", e clique em \"Enviar\". Você receberá um link por e-mail para definir sua senha. Para acessos futuros, entre na mesma página, insira seu CPF e senha, e clique em \"Acessar\"."
+  },
+  "suap": {
+    "keywords": ["suap"],
+    "info": "O SUAP (Sistema Unificado de Administração Pública) do IFSP é uma plataforma digital que integra diversas funcionalidades para a gestão acadêmica e administrativa da instituição. Ele permite que alunos, professores e servidores acessem informações sobre matrícula, notas, frequência e documentos, facilitando a comunicação e a administração dos processos internos do instituto."
+  },
+  "acesso moodle": {
+    "keywords": ["acesso moodle", "acessar moodle", "entrar moodle", "login moodle"],
+    "info": "Para acessar o Moodle como aluno no IFSP, visite o site da instituição, clique na opção \"Moodle\" e insira seu CPF e senha. Caso não tenha acesso, verifique com o professor ou a coordenação do seu curso para obter as credenciais necessárias."
+  },
+  "moodle": {
+    "keywords": ["moodle"],
+    "info": "O Moodle é uma plataforma de aprendizado online utilizada pelo IFSP para gerenciar cursos, disponibilizar materiais, realizar avaliações e facilitar a interação entre alunos e professores."
+  },
+  "email_aluno": {
+    "keywords": [
+      "email aluno",
+      "email institucional",
+      "email estudante",
+      "acesso email",
+      "acessar email",
+      "criar email",
+      "criacao email"
+    ],
+    "info": "O IFSP disponibiliza um e-mail institucional para alunos no formato @aluno.ifsp.edu.br. Este e-mail oferece uma caixa de mensagens e acesso a ferramentas como Office 365 e armazenamento na nuvem. Para criar uma conta de e-mail, o aluno deve acessar o SUAP, assinar o termo de uso, escolher seu e-mail e seguir as instruções enviadas para seu e-mail pessoal. Caso tenha dúvidas, é recomendado procurar a Coordenadoria de Tecnologia da Informação (TI), a Coordenadoria de Apoio ao Ensino (CAE) ou a Coordenadoria Sociopedagógica (CSP) do câmpus."
+  },
+  "carteirinha": {
+    "keywords": ["carteirinha"],
+    "info": "A carteirinha estudantil é um documento que comprova a condição de aluno. Para obtê-la, acesse o Suap, vá em \"ENSINO\", depois \"Procedimentos de Apoio\" e selecione \"Emitir Carteirinha Estudantil\". Em seguida, faça o download do arquivo gerado."
+  },
+  "boletim": {
+    "keywords": ["boletim", "notas", "frequencia", "frequencias", "historico"],
+    "info": "Para ver o boletim no Suap, acesse sua conta, clique em \"ENSINO\" e selecione \"Boletim\". Ali, você encontrará suas notas e frequências por disciplina, podendo visualizar o histórico acadêmico completo."
+  },
+  "biblioteca": {
+    "keywords": ["biblioteca"],
+    "info": "A biblioteca do IFSP Câmpus Salto atende nos períodos matutino, vespertino e noturno, oferecendo espaços para estudo. Possui empréstimos de livros e periódicos pelo sistema Pergamum, com acesso a livros virtuais e normas técnicas. O acervo abrange diversas áreas do conhecimento, em constante expansão. O horario de funcionamento é de segunda a quinta, das 8h às 22h, e na sexta, das 8h às 20h. Contato: biblioteca.salto@ifsp.edu.br."
+  },
+  "pos_graduacao": {
+    "keywords": [
+      "pos graduacao",
+      "especializacoes",
+      "especializacao"
+    ],
+    "info": "As especializações do IFSP em Salto são: Temas Transversais, Cultura, Educação e Tecnologias, e Educação Matemática: Crítica e Sociedade. Se precisar de mais informações ou detalhes, estou à disposição!"
+  },
+  "temas_transversais": {
+    "keywords": ["temas transversais", "pos temas transversais"],
+    "info": "A Pós-graduação Lato Sensu em Temas Transversais forma profissionais da educação para atuar criticamente em questões como Ética, Saúde e Pluralidade Cultural. O ingresso se dá por processo seletivo, no turno noturno, com duração de 3 semestres e carga horária mínima de 420 horas. O curso é presencial, com 30 vagas disponíveis."
+  },
+  "cultura_educacao_tec": {
+    "keywords": ["cultura educacao tec", "pos cultura educacao"],
+    "info": "A Pós-graduação Lato Sensu em Cultura, Educação e Tecnologias visa formar profissionais críticos na educação, integrando tecnologias da informação e comunicação ao ensino. O ingresso ocorre por processo seletivo, com duração de 3 semestres no turno noturno, totalizando 420 horas. O curso é presencial e oferece 30 vagas."
+  },
+  "matematica_critica": {
+    "keywords": ["matematica critica", "pos matematica critica"],
+    "info": "A Pós-graduação Lato Sensu em Educação Matemática: Crítica e Sociedade forma profissionais críticos para atuar na Educação Básica e Superior. O ingresso ocorre por processo seletivo, com início das aulas em abril de 2024. O curso tem duração de 3 semestres, é presencial no turno noturno e oferece 30 vagas."
+  },
+  "graduacao": {
+    "keywords": ["graduacao", "bacharelados", "licenciaturas"],
+    "info": "O IFSP Campus Salto oferece um total de cinco graduações. Entre os Bacharelados, estão disponíveis os cursos de Ciência da Computação e Engenharia de Controle e Automação. Na área de Licenciaturas, o campus oferece os cursos de Letras - Português e Matemática. Além disso, na categoria de Cursos Tecnológicos, está disponível o curso de Análise e Desenvolvimento de Sistemas. Se desejar mais informações, sinta-se à vontade para perguntar!"
+  },
+  "cae": {
+    "keywords": [
+      "cae",
+      "apoio ao ensino",
+      "suporte pedagógico",
+      "coordenadoria apoio",
+      "apoio ensino",
+      "suporte ensino",
+      "coordenadoria do apoio",
+      "assistência ao ensino"
+    ],
+    "info": "A Coordenadoria de Apoio ao Ensino (CAE) é responsável por auxiliar e controlar as atividades do corpo docente e discente no câmpus, oferecendo suporte pedagógico e divulgando atividades educacionais. Suas funções incluem assessorar coordenações de cursos, organizar horarios escolares, auxiliar docentes em recursos pedagógicos, supervisionar o Programa de Alimentação Escolar e garantir o cumprimento das normas disciplinares, visando melhorar a experiência educacional de todos."
+  },
+  "alimentacao": {
+    "keywords": ["alimentacao", "agendamento alimentacao"],
+    "info": "O sistema de alimentação do IFSP Campus Salto permite o agendamento de refeições. Os pedidos devem ser feitos de segunda-feira a partir das 08:00 am até quinta-feira às 23:59 pm. Não há possibilidade de cancelamento dos pedidos. Caso a refeição não seja retirada, é necessário justificar no sistema de alimentação. Sem a justificativa, você ficará bloqueado para novos pedidos. Para mais informações, consulte o tutorial no sistema ou envie um e-mail para alimentacao.slt@ifsp.edu.br."
+  },
+  "csp": {
+    "keywords": [
+      "csp",
+      "coordenadoria sociopedagogica",
+      "assistencia social",
+      "apoio pedagogico",
+      "sociopedagogica",
+      "apoio social",
+      "coordenadoria pedagogica",
+      "setor pedagogico"
+    ],
+    "info": "A Coordenadoria Sociopedagógica (CSP) do IFSP orienta, acompanha e propõe ações pedagógicas e psicossociais para promover a qualidade do ensino e a permanência dos alunos. Oferece orientação educacional, assistência estudantil (PAE) e apoio ao docente, além de combater a evasão escolar. A equipe inclui assistente social, pedagogos, psicólogo e técnicos educacionais. Subordinada à Diretoria Adjunta Educacional. Telefone: (11) 4602-9194 E-mail: csp.slt@ifsp.edu.br Horário de atendimento: Segunda a sexta, das 8h às 21h."
+  },
+  "auxilio_permanencia": {
+    "keywords": [
+      "auxilio permanencia",
+      "assistencia estudantil",
+      "pae",
+      "bolsas",
+      "bolsa permanencia"
+    ],
+    "info": "O Programa de Auxílio Permanência (PAE) oferece suporte financeiro a estudantes em vulnerabilidade social, com renda per capita de até R$ 2.118,00. As modalidades incluem auxílio alimentação, transporte, moradia, creche, material didático e saúde. Para participar, acesse o SUAP e preencha a inscrição com documentos comprobatórios."
+  },
+  "auxilio_alimentacao": {
+    "keywords": [
+      "auxilio alimentacao",
+      "bolsa alimentacao",
+      "ajuda alimentacao"
+    ],
+    "info": "O Auxílio Alimentação oferece R$ 200,00 mensais para garantir uma refeição diária aos estudantes. Alunos de cursos técnicos têm acesso à alimentação no campus, sem auxílio financeiro."
+  },
+  "auxilio_transporte": {
+    "keywords": [
+      "auxilio transporte",
+      "bolsa transporte",
+      "ajuda transporte"
+    ],
+    "info": "O Auxílio Transporte destina R$ 120,00 mensais para cobrir despesas de deslocamento dos estudantes até o campus, facilitando o acesso às aulas e atividades acadêmicas."
+  },
+  "apoio_pais": {
+    "keywords": [
+      "apoio pais",
+      "apoio maes",
+      "suporte a pais",
+      "auxilio creche"
+    ],
+    "info": "O Apoio aos Estudantes Pais e Mães (Creche) oferece R$ 170,00 mensais para estudantes com filhos de até 11 anos e 11 meses, auxiliando nos custos com creche e cuidados infantis."
+  },
+  "auxilio_didatico": {
+    "keywords": ["auxilio didatico", "apoio didatico"],
+    "info": "O Auxílio Apoio Didático-Pedagógico oferece até R$ 150,00 uma única vez para a compra de materiais didáticos relacionados ao curso ou projetos, visando apoiar o aprendizado dos estudantes."
+  },
+  "auxilio_saude": {
+    "keywords": ["auxilio saude", "bolsa saude", "ajuda saude"],
+    "info": "O Auxílio Saúde oferece até R$ 250,00 para estudantes com problemas de saúde que afetam o aprendizado, priorizando casos com dificuldade de acesso ao SUS. Solicitação requer laudo médico e análise da Coordenadoria Sociopedagógica."
+  },
+  "bolsa_ensino": {
+    "keywords": ["bolsa ensino", "bolsa auxilio"],
+    "info": "O Programa de Bolsas de Ensino, regulamentado pela Portaria nº 1254/2013, tem como objetivo apoiar a participação dos estudantes em atividades acadêmicas e projetos que contribuam para sua formação e aprimoramento profissional. A bolsa permite que o aluno desenvolva atividades educacionais compatíveis com seu nível de conhecimento, interagindo com docentes e auxiliando outros discentes. Para participar, fique atento às divulgações no site do IFSP sobre os projetos e prazos de inscrição."
+  },
+  "pesquisa": {
+    "keywords": [
+      "pesquisa",
+      "iniciacao cientifica",
+      "pibifsp",
+      "bolsa de pesquisa"
+    ],
+    "info": "O Programa Institucional de Bolsas de Iniciação Científica e Tecnológica do IFSP (PIBIFSP) tem o objetivo de introduzir estudantes de nível médio e de graduação à pesquisa científica e tecnológica. Os professores orientadores submetem projetos de pesquisa para avaliação, geralmente em outubro. Após a aprovação, o orientador seleciona os candidatos para as bolsas, que têm duração de 9 meses. O resultado é divulgado em fevereiro, e o trabalho segue até novembro, com o envio de dois relatórios à Pró-reitoria de Pesquisa: um em julho e outro em dezembro, no final do projeto."
+  },
+  "inscricao": {
+    "keywords": ["inscricao", "processo seletivo"],
+    "info": "As modalidades técnico, graduação e pós-graduação no IFSP campus Salto possuem processos seletivos diferentes. Para informações específicas sobre cada modalidade, basta digitar técnico, graduação ou pós e você receberá detalhes sobre o processo seletivo correspondente."
+  },
+  "infraestrutura": {
+    "keywords": [
+      "infraestrutura",
+      "setor",
+      "setores",
+      "departamento",
+      "unidade",
+      "instalacoes",
+      "estrutura"
+    ],
+    "info": "A infraestrutura do IFSP Campus Salto é dividida em Direção Geral (DRG), Diretoria Adjunta de Administração (DAA) e Diretoria Adjunta Educacional (DAE), cada uma com suas subdivisões. A Direção Geral supervisiona todas as atividades, enquanto a DAA cuida das questões administrativas e a DAE é responsável pelos aspectos educacionais. Para mais informações sobre cada setor, basta perguntar!"
+  },
+  "direcao geral": {
+    "keywords": [
+      "direcao geral",
+      "drg",
+      "administração central",
+      "gerencia",
+      "direcao"
+    ],
+    "info": "A direção geral é responsável por supervisionar e coordenar as atividades acadêmicas e administrativas da instituição. É composta por CDI (Coordenação de Apoio à Direção), CEX (Coordenação de Extensão), CTI (Coordenação de Tecnologia da Informação) e CPI (Coordenação de Pesquisa e Inovação). O e-mail drg.slt@ifsp.edu.br é um canal de comunicação para assuntos relacionados."
+  },
+  "diretoria administracao": {
+    "keywords": ["diretoria administracao", "daa", "administracao"],
+    "info": "A Diretoria Adjunta de Administração (DAA) do IFSP é responsável pela coordenação administrativa da instituição. Ela é composta por quatro subdivisões: CCF (Contabilidade e Finanças), CAP (Manutenção, Almoxarifado e Patrimônio), CGP (Gestão de Pessoas) e CLT (Licitações e Contratos). Para mais informações, contate: daa.slt@ifsp.edu.br."
+  },
+  "diretoria educacional": {
+    "keywords": ["diretoria educacional", "dae", "ensino"],
+    "info": "A Diretoria Adjunta Educacional (DAE) do IFSP é responsável pela coordenação das atividades educacionais e pela supervisão dos cursos. Seus setores incluem: CBI (Biblioteca), CAE (Apoio ao Ensino), CRA (Registros Acadêmicos), CSP (Sociopedagógica) e as Coordenações dos Cursos (ADS, BCC, ECA, LET, MAT, TAI, TINF, PTT, TADM, etc.). Para mais informações, contate: dae.salto@ifsp.edu.br."
+  },
+  "coordenadoria direcao": {
+    "keywords": ["coordenadoria direcao", "cdi", "apoio direcao"],
+    "info": "A Coordenadoria de Apoio à Direção (CDI) fornece suporte técnico-administrativo à Direção-Geral, elaborando documentos oficiais, controlando comissões e gerindo correspondências. Contato: cdi.slt@ifsp.edu.br ou (11) 4602-9186."
+  },
+  "coordenadoria extensao": {
+    "keywords": ["coordenadoria extensao", "cex", "extensao"],
+    "info": "A Coordenadoria de Extensão (CEX) planeja e executa atividades que promovem a integração com a comunidade externa, como eventos, cursos, estágios, acordos de cooperação e visitas técnicas."
+  },
+  "coordenadoria tecnologia": {
+    "keywords": [
+      "coordenadoria tecnologia",
+      "cti",
+      "setor de tecnologia",
+      "suporte técnico",
+      "ti"
+    ],
+    "info": "A Coordenadoria de Tecnologia da Informação (CTI) coordena e implementa atividades de informática, incluindo treinamento, manutenção de sistemas, desenvolvimento de softwares e suporte técnico. Contato para suporte: suporteservidor.slt@ifsp.edu.br; outros: cti.salto@ifsp.edu.br."
+  },
+  "ifa": {
+    "keywords": ["ifa", "instrumento final", "prova final"],
+    "info": "O Instrumento Final de Avaliação (IFA) é acessível aos alunos com frequência mínima de 75% e média entre 4 e 6 na disciplina. A nota do IFA prevalece sobre a média das avaliações anteriores, se for superior."
+  },
+  "abono de faltas": {
+    "keywords": [
+      "abono faltas",
+      "justificativa falta",
+      "dispensa falta",
+      "declaração falta",
+      "isenção falta"
+    ],
+    "info": "O abono de faltas é concedido em casos específicos (ex: militar, óbito de parente, atestado médico, etc.). O pedido deve ser feito à CRA em até dois dias úteis após o evento. Para afastamentos médicos > 15 dias, é possível solicitar o Regime de Exercícios Domiciliares (RED)."
+  },
+  "aproveitamento de estudos": {
+    "keywords": [
+      "aproveitamento estudos",
+      "dispensa disciplina",
+      "isenção disciplina"
+    ],
+    "info": "O aluno pode solicitar o aproveitamento de estudos para dispensa de disciplinas (técnicos e superiores), apresentando histórico e ementa na CRA, respeitando o calendário escolar."
+  },
+  "cancelar matricula": {
+    "keywords": [
+      "cancelar matricula",
+      "cancelamento matricula",
+      "encerrar matrícula",
+      "cancelamento curso",
+      "desistir curso"
+    ],
+    "info": "O aluno pode solicitar o cancelamento da matrícula a qualquer momento. É necessário preencher um requerimento na CRA, apresentar declaração de débito da biblioteca e realizar entrevista na CSP."
+  },
+  "trancamento de semestre": {
+    "keywords": [
+      "trancar semestre",
+      "trancamento semestre",
+      "trancar matricula",
+      "trancamento matricula",
+      "trancar curso",
+      "trancamento curso",
+      "pausa no curso"
+    ],
+    "info": "O estudante pode requerer o trancamento de matrícula a partir do segundo período letivo, interrompendo os estudos por até um período letivo em cursos anuais ou dois em cursos semestrais."
+  },
+  "frequencia necessaria": {
+    "keywords": [
+      "frequencia necessaria",
+      "quanto frequencia",
+      "frequencia obrigatoria",
+      "minimo presença",
+      "percentual presenca",
+      "frequencia minima"
+    ],
+    "info": "A frequência às aulas e atividades escolares é obrigatória, com um mínimo de 75% para aprovação."
+  },
+  "rematricula": {
+    "keywords": [
+      "rematricula",
+      "renovar matricula",
+      "renovacao matrícula",
+      "continuacao curso"
+    ],
+    "info": "A rematrícula deve ser renovada a cada semestre letivo por meio do Requerimento de Rematrícula na CRA, dentro do prazo estipulado no Calendário Escolar."
+  },
+  "curso": {
+    "keywords": ["curso", "cursos", "curs", "tipos de curso"],
+    "info": "O IFSP Campus Salto disponibiliza 4 cursos técnicos, 5 cursos de graduação e 3 cursos de pós-graduação.\n\nPara obter mais informações, faça a pergunta relativo ao curso técnico, graduação ou pós-graduação que você deseja."
+  },
+  "centro academico": {
+    "keywords": ["centro academico", "cacc"],
+    "info": "O Centro Acadêmico de Ciência da Computação (CACC) no IFSP promove atividades culturais, sociais e acadêmicas, além de representar os alunos. Siga o Instagram @cacc.ifsp para acompanhar eventos e novidades da área."
+  },
+  "edilson": {
+    "keywords": ["edilson", "diretor", "diretor geral"],
+    "info": "Edilson Aparecido Bueno é o Diretor Geral do Câmpus Salto do IFSP. Ele é responsável pela gestão administrativa e acadêmica. E-mail: drg.slt@ifsp.edu.br."
+  },
+  "reitoria": {
+    "keywords": ["reitoria", "reitor", "silmario"],
+    "info": "A Reitoria é o órgão executivo que representa o IFSP, responsável pela administração e supervisão das atividades da autarquia. O atual Reitor é Silmário Batista dos Santos."
+  },
+  "ifsp": {
+    "keywords": [
+      "ifsp",
+      "instituto federal",
+      "federal de são paulo",
+      "if são paulo"
+    ],
+    "info": "O IFSP (Instituto Federal de São Paulo) é uma instituição de ensino que oferece cursos técnicos, superiores e de pós-graduação, com foco em educação tecnológica, pesquisa e extensão, promovendo desenvolvimento social e econômico."
+  },
+  "instagram ifsp": {
+    "keywords": [
+      "instagram ifsp",
+      "instagram instituto federal",
+      "ig ifsp",
+      "ig instituto federal"
+    ],
+    "info": "O perfil oficial do IFSP (Instituto Federal de São Paulo) no Instagram é uma plataforma onde a instituição compartilha informações, eventos e notícias relevantes sobre sua comunidade e atividades.\n\nAcesse o perfil e fique por dentro das novidades!"
+  },
+  "professor ailson": {
+    "keywords": [
+      "professor ailson",
+      "professor ailson email",
+      "email professor ailson",
+      "contato professor ailson",
+      "professor ailson atendimento",
+      "professor ailson horario",
+      "horario professor ailson",
+      "atendimento professor ailson"
+    ],
+    "info": "O professor Ailson Teixeira atua na área de Indústria. O email para contato é ailson@ifsp.edu.br. Ele está disponível para atendimento nas seguintes datas e horários: segunda-feira, das 14h00 às 19h00; terça-feira, das 19h00 às 22h35; e quarta-feira, das 14h00 às 16h00."
+  },
+  "professora almerinda": {
+    "keywords": [
+      "professora almerinda",
+      "professora almerinda email",
+      "email professora almerinda",
+      "contato professora almerinda",
+      "professora almerinda atendimento",
+      "professora almerinda horario",
+      "horario professora almerinda",
+      "atendimento professora almerinda"
+    ],
+    "info": "A professora Almerinda Antônia atua na área de Educação Básica. O email para contato é almefadini@gmail.com. Ela está disponível para atendimento na quarta-feira, das 13h30 às 14h30."
+  },
+  "professor amauri": {
+    "keywords": [
+      "professor amauri",
+      "professor amauri email",
+      "email professor amauri",
+      "contato professor amauri",
+      "professor amauri atendimento",
+      "professor amauri horario",
+      "horario professor amauri",
+      "atendimento professor amauri"
+    ],
+    "info": "O professor Amauri Amorim atua na área de Indústria. O email para contato é profamauri@ifsp.edu.br. Ele oferece atendimento aos alunos nas sextas-feiras, das 10h às 12h."
+  },
+  "professora ana paula": {
+    "keywords": [
+      "professora ana paula",
+      "professora ana paula email",
+      "email professora ana paula",
+      "contato professora ana paula",
+      "professora ana paula atendimento",
+      "professora ana paula horario",
+      "horario professora ana paula",
+      "atendimento professora ana paula"
+    ],
+    "info": "A professora Ana Paula atua na área de Informática. O email para contato é anapaula.darosa@ifsp.edu.br. Ela está disponível para atendimento via e-mail."
+  },
+  "professor anderson": {
+    "keywords": [
+      "professor anderson",
+      "professor anderson email",
+      "email professor anderson",
+      "contato professor anderson",
+      "professor anderson atendimento",
+      "professor anderson horario",
+      "horario professor anderson",
+      "atendimento professor anderson"
+    ],
+    "info": "O professor Anderson Yasuhiro Afuso atua na área de Educação Básica. O email para contato é anderson.afuso@ifsp.edu.br. Ele está disponível para atendimento às terças-feiras, das 19h00 às 21h00, e às quintas-feiras, das 11h00 às 12h00."
+  },
+  "professora bruna": {
+    "keywords": [
+      "professora bruna",
+      "professora bruna email",
+      "email professora bruna",
+      "contato professora bruna",
+      "professora bruna atendimento",
+      "professora bruna horario",
+      "horario professora bruna",
+      "atendimento professora bruna"
+    ],
+    "info": "A professora Bruna Lammoglia atua na área de Educação Básica. O email para contato é bruna@ifsp.edu.br. Ela está disponível para atendimento na sala dos professores, das 16h às 17h."
+  },
+  "professor bruno": {
+    "keywords": [
+      "professor bruno",
+      "professor bruno email",
+      "email professor bruno",
+      "contato professor bruno",
+      "professor bruno atendimento",
+      "professor bruno horario",
+      "horario professor bruno",
+      "atendimento professor bruno",
+      "professor bruno atende"
+    ],
+    "info": "O professor Bruno do Amaral atua na área de Indústria. O email para contato é brunodoamaral@ifsp.edu.br. Ele está disponível para atendimento na sala dos professores, às quartas-feiras, das 15h às 16h."
+  },
+  "professor caio": {
+    "keywords": [
+      "professor caio",
+      "professor caio email",
+      "email professor caio",
+      "contato professor caio",
+      "professor caio atendimento",
+      "professor caio horario",
+      "horario professor caio",
+      "atendimento professor caio"
+    ],
+    "info": "O professor Caio Marcus Dias Flausino atua na área de Indústria. O email para contato é flausino@ifsp.edu.br. Ele está disponível para atendimento às terças-feiras, das 16h30 às 17h; às quartas-feiras, das 14h às 16h; e às sextas-feiras, das 16h30 às 17h."
+  },
+  "professor carlos": {
+    "keywords": [
+      "professor carlos",
+      "professor carlos email",
+      "email professor carlos",
+      "contato professor carlos",
+      "professor carlos atendimento",
+      "professor carlos horario",
+      "horario professor carlos",
+      "atendimento professor carlos"
+    ],
+    "info": "O professor Carlos Henrique atua na área de Educação Básica. O email para contato é carlos.henrique@ifsp.edu.br. Ele está disponível para atendimento às quartas-feiras, das 17h às 18h."
+  },
+  "professora carla (cathia)": {
+    "keywords": [
+      "professora carla",
+      "professora carla email",
+      "email professora carla",
+      "contato professora carla",
+      "professora carla atendimento",
+      "professora carla horario",
+      "horario professora carla",
+      "atendimento professora carla"
+    ],
+    "info": "A professora Cathia Alves atua na área de Educação Básica. O email para contato é cathiaalves@ifsp.edu.br. Ela está disponível para atendimento nas segundas-feiras, das 10h00 às 12h00."
+  },
+  "professor claudio (haruo)": {
+    "keywords": [
+      "professor claudio haruo",
+      "professor claudio haruo email",
+      "email professor claudio haruo",
+      "contato claudio haruo",
+      "professor claudio haruo atendimento",
+      "professor claudio haruo horario",
+      "horario claudio haruo",
+      "atendimento claudio haruo"
+    ],
+    "info": "O professor Cláudio Haruo Yamamoto atua na área de Informática e possui Lattes. O email para contato é haruo@ifsp.edu.br. Ele está disponível para atendimento às terças-feiras, das 18h às 19h, mediante agendamento prévio por e-mail."
+  },
+  "professor claudio (luis)": {
+    "keywords": [
+      "claudio luis",
+      "claudio luis email",
+      "email professor claudio luis",
+      "contato claudio luis",
+      "professor claudio luis atendimento",
+      "professor claudio luis horario",
+      "horario claudio luis",
+      "atendimento claudio luis"
+    ],
+    "info": "O professor Cláudio Luis Roveri Vieira atua na área de Informática. O email para contato é claudioroveri@ifsp.edu.br. Ele está disponível para atendimento na quarta, quinta e sexta-feira, das 18h00 às 19h00, mediante agendamento prévio."
+  },
+  "professor claudio": {
+    "keywords": [
+      "professor claudio"
+    ],
+    "info": "Há dois professores chamados Cláudio no IFSP Campus Salto: Cláudio Haruo Yamamoto (haruo@ifsp.edu.br - Terças, 18h às 19h) e Cláudio Luis Roveri Vieira (claudioroveri@ifsp.edu.br - Quartas, Quintas e Sextas, 18h às 19h)."
+  },
+  "professor damione": {
+    "keywords": [
+      "professor damione",
+      "professor damione email",
+      "email professor damione",
+      "contato damione",
+      "professor damione atendimento",
+      "professor damione horario",
+      "horario damione",
+      "atendimento damione"
+    ],
+    "info": "O professor Damione Damito atua na área de Informática. O email para contato é damione@ifsp.edu.br. Ele está disponível para atendimento às terças-feiras, das 18h às 19h, com agendamento prévio por e-mail."
+  },
+  "professor ed": {
+    "keywords": [
+      "professor ed",
+      "professor ed email",
+      "email professor ed",
+      "contato ed",
+      "professor ed atendimento",
+      "professor ed horario",
+      "horario ed",
+      "atendimento ed"
+    ],
+    "info": "O professor Ed Alencar atua na área de Indústria. O email para contato é ed_alencar@ifsp.edu.br. Ele realiza atendimento nas quartas-feiras, das 18h às 19h, na sala dos professores (Bloco A). Ele também oferece orientação de estágio às sextas-feiras, das 18h às 19h, em sala virtual via Google Meet, mediante agendamento por e-mail."
+  },
+  "professor edilson": {
+    "keywords": [
+      "professor edilson",
+      "professor edilson email",
+      "email professor edilson",
+      "contato edilson",
+      "professor edilson horario",
+      "horario edilson",
+      "atendimento edilson"
+    ],
+    "info": "O professor Edilson Aparecido atua na área de Educação Básica e possui Doutorado. Ele está afastado para reitoria e não possui e-mail ou horário de atendimento disponível no momento. Para mais informações, consulte a administração do IFSP."
+  },
+  "professor edson": {
+    "keywords": [
+      "professor edson",
+      "professor edson email",
+      "email professor edson",
+      "contato edson",
+      "professor edson horario",
+      "horario edson",
+      "atendimento edson"
+    ],
+    "info": "O professor Edson Murakami atua na área de Informática. O email para contato é murakami@ifsp.edu.br. Ele está disponível para atendimento às quartas-feiras, das 15h às 16h."
+  },
+  "professor eduardo": {
+    "keywords": [
+      "professor eduardo",
+      "professor eduardo email",
+      "email professor eduardo",
+      "contato eduardo",
+      "professor eduardo horario",
+      "horario eduardo",
+      "atendimento eduardo"
+    ],
+    "info": "O professor Eduardo Tadeu atua na área de Informática. Ele está afastado para qualificação e não possui e-mail ou horário de atendimento disponível no momento. Para mais informações, consulte a administração do IFSP."
+  },
+  "professor eli": {
+    "keywords": [
+      "professor eli",
+      "professor eli email",
+      "email professor eli",
+      "contato eli",
+      "professor eli horario",
+      "horario eli",
+      "atendimento eli"
+    ],
+    "info": "O professor Eli Gomes Castanho atua na área de Educação Básica. O email para contato é eli.castanho@ifsp.edu.br. Ele está disponível para atendimento, mas não há informações específicas sobre os horários. Para mais detalhes, entre em contato pelo e-mail fornecido."
+  },
+  "professora eliane": {
+    "keywords": [
+      "professora eliane",
+      "professora eliane email",
+      "email professora eliane",
+      "contato eliane",
+      "professora eliane horario",
+      "horario eliane",
+      "atendimento eliane"
+    ],
+    "info": "A professora Eliane Aparecida Bacocina atua na área de Educação Básica e possui Doutorado. O email para contato é elianeab@ifsp.edu.br. Ela está disponível para atendimento às segundas-feiras, das 18h às 19h. Você pode consultar o Lattes dela para mais informações."
+  },
+  "professor erico": {
+    "keywords": [
+      "professor erico",
+      "professor erico email",
+      "email professor erico",
+      "contato erico",
+      "professor erico horario",
+      "horario erico",
+      "atendimento erico"
+    ],
+    "info": "O professor Érico Pessoa atua na área de Indústria. O email para contato é ericopfelix@ifsp.edu.br. Ele está disponível para atendimento às quartas-feiras, das 14h às 16h, na sala dos professores, mediante agendamento por e-mail."
+  },
+  "professor fabio modesto": {
+    "keywords": [
+      "professor modesto",
+      "professor fabio alexandre",
+      "professor modesto email",
+      "email professor modesto",
+      "contato modesto",
+      "professor modesto horario",
+      "horario modesto",
+      "atendimento modesto"
+    ],
+    "info": "O professor Fabio Modesto atua na área de Informática e possui Mestrado. O email para contato é fabiomodesto@ifsp.edu.br. Ele está disponível para atendimento às terças e quartas-feiras, das 09h00 às 12h00, na biblioteca."
+  },
+  "professor fabio de paula": {
+    "keywords": [
+      "professor fabio de paula",
+      "professor fabio de paula email",
+      "email professor fabio de paula",
+      "contato fabio de paula",
+      "professor fabio de paula horario",
+      "horario fabio de paula",
+      "atendimento fabio de paula"
+    ],
+    "info": "O professor Fabio de Paula Santos atua na área de Informática. O email para contato é fabio.santos@ifsp.edu.br. Ele está disponível para atendimento às quartas-feiras, das 10h30 às 11h30."
+  },
+  "professor fabio lumertz": {
+    "keywords": [
+      "professor fabio lumertz",
+      "professor lumertz email",
+      "email lumertz",
+      "contato lumertz",
+      "professor lumertz horario",
+      "horario fabio lumertz",
+      "atendimento fabio lumertz"
+    ],
+    "info": "O professor Fábio Lumertz Garcia atua na área de Indústria. O email para contato é fabiolumertz@ifsp.edu.br. Ele está disponível para atendimento às quartas-feiras, das 14h00 às 16h00, mediante agendamento por e-mail, na sala dos professores ou no Lab 215."
+  },
+  "professor fabio": {
+    "keywords": [
+      "professor fabio"
+    ],
+    "info": "Há três professores com o nome Fábio: Fabio Modesto (fabiomodesto@ifsp.edu.br, Informática); Fabio de Paula (fabio.santos@ifsp.edu.br, Informática); e Fábio Lumertz (fabiolumertz@ifsp.edu.br, Indústria)."
+  },
+  "professora fabiola": {
+    "keywords": [
+      "professora fabiola",
+      "professora fabiola email",
+      "email professora fabiola",
+      "contato fabiola tocchini",
+      "professora fabiola horario",
+      "horario fabiola tocchini",
+      "atendimento fabiola tocchini"
+    ],
+    "info": "A professora Fabíola Tocchini atua na área de Indústria. O e-mail para contato é fabiolatdef@ifsp.edu.br. Ela está disponível para atendimento às quartas-feiras, das 14h às 15h."
+  },
+  "professora fabricia": {
+    "keywords": [
+      "professora fabricia",
+      "professora fabricia email",
+      "email professora fabricia",
+      "contato fabricia da silva",
+      "professora fabricia horario",
+      "horario fabricia da silva",
+      "atendimento fabricia da silva"
+    ],
+    "info": "A professora Fabricia da Silva atua na área de Educação Básica. O e-mail para contato é fabricia.souza@ifsp.edu.br. Ela está disponível para atendimento às quintas-feiras, das 13h30 às 15h."
+  },
+  "professor felipe": {
+    "keywords": [
+      "professor felipe",
+      "professor felipe email",
+      "email professor felipe",
+      "contato felipe miranda"
+    ],
+    "info": "O professor Felipe Antonio Moura Miranda atua na área de Informática. O e-mail para contato é miranda@ifsp.edu.br. Ele está atualmente afastado para exercício em outro ministério."
+  },
+  "professor francisco": {
+    "keywords": [
+      "professor francisco",
+      "professor francisco email",
+      "email professor francisco",
+      "contato francisco",
+      "professor francisco horario",
+      "horario francisco",
+      "atendimento francisco"
+    ],
+    "info": "O professor Francisco Diego atua na área de Informática. O email para contato é diego@ifsp.edu.br. Ele está disponível para atendimento às sextas-feiras, das 17h às 18h, mediante agendamento por e-mail."
+  },
+  "professor giacomo": {
+    "keywords": [
+      "professor giacomo",
+      "professor giacomo email",
+      "email professor giacomo",
+      "contato giacomo",
+      "professor giacomo horario",
+      "horario giacomo",
+      "atendimento giacomo"
+    ],
+    "info": "O professor Giacomo Augusto Bonetto atua na área de Educação Básica. O email para contato é profgiacomo@ifsp.edu.br. Ele está disponível para atendimento às terças-feiras, das 15h às 16h."
+  },
+  "professora giovana": {
+    "keywords": [
+      "professora giovana",
+      "professora giovana email",
+      "email professora giovana",
+      "contato giovana",
+      "professora giovana horario",
+      "horario giovana",
+      "atendimento giovana"
+    ],
+    "info": "A professora Giovana Yuko atua na área de Informática. O email para contato é gyuko@ifsp.edu.br. Ela oferece atendimento às terças-feiras, das 10h40 às 11h40, e às quartas-feiras, das 07h30 às 08h30."
+  },
+  "professora graziela": {
+    "keywords": [
+      "professora graziela",
+      "professora graziela email",
+      "email professora graziela",
+      "contato graziela",
+      "professora graziela horario",
+      "horario graziela",
+      "atendimento graziela"
+    ],
+    "info": "A professora Graziela Bachião atua na área de Educação Básica. O email para contato é grazielabachiao@ifsp.edu.br. Ela está disponível para atendimento na quinta-feira, das 18h às 19h."
+  },
+  "professora jacqueline": {
+    "keywords": [
+      "professora jacqueline",
+      "professora jacqueline email",
+      "email professora jacqueline",
+      "contato jacqueline",
+      "professora jacqueline horario",
+      "horario jacqueline",
+      "atendimento jacqueline"
+    ],
+    "info": "A professora Jacqueline de Almeida Barbosa Franco atua na área de Indústria. O email para contato é jacqueline.almeida@ifsp.edu.br. Ela oferece atendimento assíncrono em qualquer dia da semana por e-mail."
+  },
+  "professora joana": {
+    "keywords": [
+      "professora joana",
+      "professora joana email",
+      "email professora joana",
+      "contato joana",
+      "professora joana horario",
+      "horario joana",
+      "atendimento joana"
+    ],
+    "info": "A professora Joana de São Pedro atua na área de Educação Básica. O email para contato é joana.pedro@ifsp.edu.br. Ela está disponível para atendimento na quarta-feira, das 15h às 16h."
+  },
+  "professora juliana": {
+    "keywords": [
+      "professora juliana",
+      "professora juliana email",
+      "email professora juliana",
+      "contato juliana",
+      "professora juliana horario",
+      "horario juliana",
+      "atendimento juliana"
+    ],
+    "info": "A professora Juliana Arruda Vieira atua na área de Educação Básica. O email para contato é juliana.vieira@ifsp.edu.br. Ela está disponível para atendimento nas quintas-feiras, das 14h às 15h, e nas sextas-feiras, das 18h às 19h, por meio do Meet."
+  },
+  "professor leonardo": {
+    "keywords": [
+      "professor leonardo",
+      "professor leonardo email",
+      "email professor leonardo",
+      "contato leonardo",
+      "professor leonardo horario",
+      "horario leonardo",
+      "atendimento leonardo"
+    ],
+    "info": "O professor Leonardo Borges da Cruz atua na área de Educação Básica. O email para contato é professorleo@ifsp.edu.br. Ele está disponível para atendimento na segunda-feira, das 08h às 10h."
+  },
+  "professor luis sacchi": {
+    "keywords": [
+      "professor sacchi",
+      "professor luis henrique",
+      "email sacchi",
+      "contato sacchi",
+      "luis henrique email",
+      "luis henrique contato",
+      "horario sacchi",
+      "atendimento sacchi",
+      "horario luis henrique",
+      "atendimento luis henrique"
+    ],
+    "info": "O professor Luis Henrique Sacchi atua na área de Informática. O email para contato é sacchi@ifsp.edu.br. Ele está disponível para atendimento às terças-feiras, das 13h às 14h."
+  },
+  "professor luiz ferrari": {
+    "keywords": [
+      "professor ferrari",
+      "professor luiz antonio",
+      "professor ferrari email",
+      "email professor ferrari",
+      "contato ferrari"
+    ],
+    "info": "O professor Luiz Antonio Ferrari atua na área de Indústria. Para mais informações ou contato, utilize o e-mail."
+  },
+  "professor luiz biagio": {
+    "keywords": [
+      "professor biagio",
+      "professor luiz arnaldo",
+      "professor biagio email",
+      "email professor biagio",
+      "contato biagio"
+    ],
+    "info": "O professor Luiz Arnaldo Biagio atua na área de Indústria. Para mais informações ou contato, utilize o e-mail."
+  },
+  "professor luiz eduardo": {
+    "keywords": [
+      "professor luiz eduardo",
+      "professor luiz eduardo email",
+      "email professor luiz eduardo",
+      "contato luiz eduardo"
+    ],
+    "info": "O professor Luiz Eduardo Miranda José Rodrigues atua na área de Indústria. Para mais informações ou contato, utilize o e-mail."
+  },
+  "professor luis/luiz (geral)": {
+    "keywords": [
+      "professor luis",
+      "professor luiz"
+    ],
+    "info": "No IFSP Campus Salto, há mais de um professor com o nome 'Luiz/Luis': Luis Sacchi (Informática, sacchi@ifsp.edu.br); Luiz Ferrari (Indústria); Luiz Biagio (Indústria); Luiz Eduardo Miranda (Indústria)."
+  },
+  "professor marcio": {
+    "keywords": [
+      "professor marcio",
+      "professor marcio email",
+      "email professor marcio",
+      "contato marcio",
+      "professor marcio horario",
+      "horário marcio",
+      "atendimento marcio"
+    ],
+    "info": "O professor Márcio Pironel atua na área de Educação Básica. O email para contato é marcio.pironel@ifsp.edu.br. Ele está disponível para atendimento às quartas-feiras, das 13h30 às 15h30, e às terças-feiras, das 18h às 19h."
+  },
+  "professor marcos": {
+    "keywords": [
+      "professor marcos",
+      "professor marcos email",
+      "email professor marcos",
+      "contato marcos",
+      "professor marcos horario",
+      "horário marcos",
+      "atendimento marcos"
+    ],
+    "info": "O professor Marcos Alexandre Capellari atua na área de Educação Básica. O email para contato é capellari@ifsp.edu.br. Ele está disponível para atendimento às quartas-feiras, das 15h às 16h."
+  },
+  "professora marisol": {
+    "keywords": [
+      "professora marisol",
+      "professora marisol email",
+      "email professora marisol",
+      "contato marisol",
+      "professora marisol horario",
+      "horário marisol",
+      "atendimento marisol"
+    ],
+    "info": "A professora Marisol Gosse Bergamo atua na área de Educação Básica. Ela está disponível para atendimento às sextas-feiras, das 8h40 às 10h40. O e-mail para contato é fornecido mediante solicitação, entre em contato para mais informações."
+  },
+  "professor mateus": {
+    "keywords": [
+      "professor mateus",
+      "professor mateus email",
+      "email professor mateus",
+      "contato mateus",
+      "professor mateus horario",
+      "horário mateus",
+      "atendimento mateus"
+    ],
+    "info": "O professor Mateus Cruz atua na área de Educação Básica. O email para contato é mateus.carvalho@ifsp.edu.br. Ele está disponível para atendimento às quartas-feiras, das 14h às 16h, ou em outro dia e horário mediante agendamento por e-mail."
+  },
+  "professor mauricio": {
+    "keywords": [
+      "professor mauricio",
+      "professor mauricio email",
+      "email professor mauricio",
+      "contato mauricio",
+      "professor mauricio horario",
+      "horário mauricio",
+      "atendimento mauricio"
+    ],
+    "info": "O professor Maurício Bronzatto atua na área de Educação Básica. O email para contato é mauricio.bronzatto@ifsp.edu.br. Ele está disponível para atendimento às sextas-feiras, das 10h às 12h."
+  },
+  "professor mauro": {
+    "keywords": [
+      "professor mauro",
+      "professor mauro email",
+      "email professor mauro",
+      "contato mauro",
+      "professor mauro horario",
+      "horário mauro",
+      "atendimento mauro"
+    ],
+    "info": "O professor Mauro Sérgio atua na área de Indústria. O email para contato é mauro@ifsp.edu.br. O atendimento é realizado às quintas-feiras, das 17h às 19h, com agendamento via e-mail."
+  },
+  "professor nilson": {
+    "keywords": [
+      "professor nilson",
+      "professor nilson email",
+      "email professor nilson",
+      "contato nilson",
+      "professor nilson horario",
+      "horário nilson",
+      "atendimento nilson"
+    ],
+    "info": "O professor Nilson Roberto atua na área de Indústria. O email para contato é inocente@ifsp.edu.br. Ele está disponível para atendimento em diversos horários durante a semana, mediante agendamento via e-mail."
+  },
+  "professor paulo": {
+    "keywords": [
+      "professor paulo",
+      "professor paulo email",
+      "email professor paulo",
+      "contato paulo",
+      "professor paulo horario",
+      "horário paulo",
+      "atendimento paulo"
+    ],
+    "info": "O professor Paulo Sérgio Prampero atua na área de Informática. O email para contato é prampero@ifsp.edu.br. O atendimento é realizado às quartas-feiras, das 14h às 16h."
+  },
+  "professora priscila": {
+    "keywords": [
+      "professora priscila",
+      "professora priscila email",
+      "email professora priscila",
+      "contato priscila",
+      "professora priscila horario",
+      "horário priscila",
+      "atendimento priscila"
+    ],
+    "info": "A professora Pricila Balan atua na área de Educação Básica. O email para contato é pricilapicinato@ifsp.edu.br. O atendimento é realizado às segundas e quartas-feiras, em horários assíncronos e síncronos."
+  },
+  "professor reinaldo batista": {
+    "keywords": [
+      "professor reinaldo batista",
+      "professor reinaldo batista email",
+      "email professor reinaldo batista",
+      "contato reinaldo batista",
+      "professor reinaldo batista horario",
+      "horário reinaldo batista",
+      "atendimento reinaldo batista"
+    ],
+    "info": "O professor Reinaldo Batista atua na área de Indústria. O email para contato é rbleite@ifsp.edu.br. O atendimento é realizado mediante agendamento às quartas-feiras, das 13h30 às 14h30."
+  },
+  "professor reinaldo do valle": {
+    "keywords": [
+      "professor reinaldo do valle",
+      "professor reinaldo do valle email",
+      "email professor reinaldo do valle",
+      "contato reinaldo do valle",
+      "professor reinaldo do valle horario",
+      "horário reinaldo do valle",
+      "atendimento reinaldo do valle"
+    ],
+    "info": "O professor Reinaldo do Valle Junior atua na área de Informática. O email para contato é rvallejr@ifsp.edu.br. O atendimento é realizado em diversos horários de segunda a quinta-feira."
+  },
+  "professor reinaldo": {
+    "keywords": ["professor reinaldo"],
+    "info": "Há dois docentes com o nome Reinaldo: **Reinaldo Batista Leite** (Indústria) atende às quartas-feiras, das 13h30 às 14h30, mediante agendamento (e-mail: rbleite@ifsp.edu.br). **Reinaldo do Valle Junior** (Informática) atende em diversos horários de segunda a quinta-feira (e-mail: rvallejr@ifsp.edu.br)."
+  },
+  "professora rejane": {
+    "keywords": [
+      "professora rejane",
+      "professora rejane email",
+      "email professora rejane",
+      "contato rejane",
+      "professora rejane horario",
+      "horário rejane",
+      "atendimento rejane"
+    ],
+    "info": "A professora Rejane Paloma Faria atua na área de Educação Básica. O email para contato é rejane.faria@ifsp.edu.br. O atendimento é realizado às terças-feiras, das 13h30 às 14h30, e às sextas-feiras, das 18h às 19h."
+  },
+  "professora renata": {
+    "keywords": [
+      "professora renata",
+      "professora renata email",
+      "email professora renata",
+      "contato renata",
+      "professora renata horario",
+      "horário renata",
+      "atendimento renata"
+    ],
+    "info": "A professora Renata Couto atua na área de Informática. O email para contato é renata.couto@ifsp.edu.br. O atendimento é realizado às terças-feiras, das 14h às 15h."
+  },
+  "professor ronaldo": {
+    "keywords": [
+      "professor ronaldo",
+      "professor ronaldo email",
+      "email professor ronaldo",
+      "contato ronaldo",
+      "professor ronaldo horario",
+      "horário ronaldo",
+      "atendimento ronaldo"
+    ],
+    "info": "O professor Ronaldo Lima atua na área de Informática. O email para contato é ronaldo.lima@ifsp.edu.br. O atendimento é realizado às quartas-feiras, das 14h às 16h, e sextas-feiras, das 17h às 18h."
+  },
+  "professor samuel": {
+    "keywords": [
+      "professor samuel",
+      "professor samuel email",
+      "email professor samuel",
+      "contato samuel",
+      "professor samuel horario",
+      "horário samuel",
+      "atendimento samuel"
+    ],
+    "info": "O professor Samuel Albino atua na área de Informática. O email para contato é samuel.albino@ifsp.edu.br. O atendimento é realizado mediante agendamento via e-mail."
+  },
+  "professor renato": {
+    "keywords": [
+      "professor renato",
+      "professor renato email",
+      "email professor renato",
+      "contato renato",
+      "professor renato horario",
+      "horário renato",
+      "atendimento renato"
+    ],
+    "info": "O professor Renato Francisco atua na área de Educação Básica. O email para contato é renatomello@ifsp.edu.br. O atendimento é realizado nas segundas-feiras, das 18h às 19h."
+  },
+  "professor ricardo dantas": {
+    "keywords": [
+      "professor ricardo dantas",
+      "professor ricardo dantas email",
+      "email professor ricardo dantas",
+      "contato ricardo dantas",
+      "professor ricardo dantas horario",
+      "horário ricardo dantas",
+      "atendimento ricardo dantas"
+    ],
+    "info": "O professor Ricardo Dantas Dematte atua na área de Informática. O email para contato é dematte@ifsp.edu.br. O atendimento é realizado às quartas, quintas e sextas-feiras, sempre às 18h, com agendamento prévio por e-mail."
+  },
+  "professor ricardo zani": {
+    "keywords": [
+      "professor ricardo zani",
+      "professor ricardo zani email",
+      "email professor ricardo zani",
+      "contato ricardo zani",
+      "professor ricardo zani horario",
+      "horário ricardo zani",
+      "atendimento ricardo zani"
+    ],
+    "info": "O professor Ricardo Zani atua na área de Educação Básica. O email para contato é zani@ifsp.edu.br. O atendimento é realizado às quartas-feiras, das 14h às 16h."
+  },
+  "professor ricardo": {
+    "keywords": ["professor ricardo"],
+    "info": "Há dois docentes com o nome Ricardo: **Ricardo Dantas** (Informática) atende nas quartas, quintas e sextas-feiras às 18h, mediante agendamento (e-mail: dematte@ifsp.edu.br). **Ricardo Zani** (Educação Básica) atende às quartas-feiras, das 14h às 16h (e-mail: zani@ifsp.edu.br)."
+  },
+  "professora seila": {
+    "keywords": [
+      "professora seila",
+      "professora seila email",
+      "email professora seila",
+      "contato seila",
+      "professora seila horario",
+      "horário seila",
+      "atendimento seila"
+    ],
+    "info": "A professora Seila Vasti Faria de Paiva atua na área de Informática. O email para contato é svfpaiva@ifsp.edu.br. O atendimento é realizado às quartas-feiras, das 14h às 15h, e às quintas-feiras, das 12h30 às 13h30."
+  },
+  "professor silvio": {
+    "keywords": [
+      "professor silvio",
+      "professor silvio email",
+      "email professor silvio",
+      "contato silvio",
+      "professor silvio horario",
+      "horário silvio",
+      "atendimento silvio"
+    ],
+    "info": "O professor Sílvio César Otero Garcia atua na área de Educação Básica. O email para contato é oterogarcia@ifsp.edu.br. O atendimento é realizado de forma assíncrona por e-mail, a qualquer dia ou horário."
+  },
+  "professora tatiana": {
+    "keywords": [
+      "professora tatiana",
+      "professora tatiana email",
+      "email professora tatiana",
+      "contato tatiana"
+    ],
+    "info": "A professora Tatiana Bussaglia de Moraes atua na área de Indústria. O email para contato é tatiana@ifsp.edu.br. Não há horário de atendimento divulgado."
+  },
+  "professor uesclei": {
+    "keywords": [
+      "professor uesclei",
+      "professor uesclei email",
+      "email professor uesclei",
+      "contato uesclei"
+    ],
+    "info": "O professor Uesclei Costa Santos atua na área de Indústria. O email para contato é uesclei.costa@ifsp.edu.br. Não há horário de atendimento divulgado."
+  },
+  "professora vania": {
+    "keywords": [
+      "professora vania",
+      "professora vania email",
+      "email professora vania",
+      "contato vania",
+      "professora vania horario",
+      "horário vania",
+      "atendimento vania"
+    ],
+    "info": "A professora Vânia Gomes atua na área de Educação Básica. O email para contato é vania.gomes@ifsp.edu.br. O atendimento é realizado às quartas-feiras, das 9h30 às 10h30."
+  },
+  "docentes": {
+    "keywords": ["docentes", "professores"],
+    "info": "O IFSP Campus Salto possui docentes nas áreas de Educação Básica, Indústria e Informática. Para informações sobre um professor em particular, sinta-se à vontade para perguntar!"
+  },
+  "saudacao": {
+    "keywords": [
+      "oi",
+      "ola",
+      "alo",
+      "e ai",
+      "eai",
+      "salve",
+      "bom dia",
+      "boa tarde",
+      "boa noite",
+      "oii",
+      "oiii",
+      "oiiii"
+    ],
+    "info": "Olá! Como posso ajudar você hoje?"
+  },
+  "despedida": {
+    "keywords": [
+      "tchau",
+      "ate logo",
+      "adeus",
+      "falou",
+      "ate breve",
+      "ate a próxima",
+      "vou embora"
+    ],
+    "info": "Até mais! Estou aqui sempre que precisar. Tenha um ótimo dia!"
+  },
+  "como_voce": {
+    "keywords": [
+      "como voce esta",
+      "tudo bem",
+      "como vai",
+      "como voce ta",
+      "como se sente",
+      "como esta",
+      "você esta bem"
+    ],
+    "info": "Estou aqui para ajudar! E você, como está hoje?"
+  },
+  "sobre_mim": {
+    "keywords": [
+      "sobre voce",
+      "quem e",
+      "o que você e",
+      "o que você faz",
+      "sua função",
+      "quem e você"
+    ],
+    "info": "Sou uma IA aqui para ajudar com informações sobre o IFSP Campus Salto e responder suas perguntas. O que você gostaria de saber?"
+  },
+  "curiosidade": {
+    "keywords": ["curiosidade", "sabe algo interessante?", "fato curioso"],
+    "info": "Você sabia que o IFSP Campus Salto foi inaugurado em 2014? Desde então, vem se destacando na formação técnica e superior!"
+  },
+  "agradecimento": {
+    "keywords": [
+      "obrigado",
+      "valeu",
+      "agradeco",
+      "gratidao",
+      "obrigada",
+      "agradecido",
+      "sou grato",
+      "muito obrigado"
+    ],
+    "info": "De nada! Fico feliz em ajudar. Se precisar de mais alguma coisa, é só avisar!"
+  },
+  "perguntar_nome": {
+    "keywords": ["como se chama", "seu nome", "como posso te chamar", "quem é você"],
+    "info": "Meu nome é Megatron 😎! E você, como se chama?"
+  },
+  "elogio": {
+    "keywords": ["você e legal", "gosto de voce", "você é util", "bom trabalho"],
+    "info": "Agradeço o elogio! Estou aqui para tornar sua experiência a melhor possível."
+  },
+  "pergunta_hora": {
+    "keywords": [
+      "que horas sao",
+      "sabe que horas sao",
+      "tem horas",
+      "informa a hora",
+      "qual e o horario"
+    ],
+    "info": "Desculpe, não consigo verificar a hora no momento, mas você pode dar uma olhada no seu relógio!"
+  },
+  "piada": {
+    "keywords": ["me conte uma piada", "piada"],
+    "info": "Por que o computador foi ao médico? Porque ele tinha um vírus!"
+  },
+  "teste": {
+    "keywords": ["teste", "testando", "testar"],
+    "info": "Teste! Teste! 1, 2, 3... Alô, alô! Está tudo funcionando perfeitamente por aqui! O que mais posso fazer por você hoje?"
+  }
+}

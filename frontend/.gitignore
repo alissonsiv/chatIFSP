@@ -1,0 +1,7 @@
+__pycache__/
+.env
+
+venv/
+
+backend/keywords.json
+backend/api_key.txt
