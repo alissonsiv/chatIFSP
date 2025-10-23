@@ -85,8 +85,6 @@ def ask_ai(question):
         f"Pergunta: {question}"
     )
 
-    print(context)
-
     try:
         response = gemini_model.generate_content(prompt)
         text = response.text.strip()

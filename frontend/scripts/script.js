@@ -19,26 +19,51 @@ let primeiraMensagem = true;
 let audioAtivo = true;
 let reconhecimento;
 
+// ===============================
+// FUNÇÕES AUXILIARES
+// ===============================
+
+// Scroll suave até o final da área de mensagens
+function scrollParaFim() {
+    areaMensagens.scrollTo({
+        top: areaMensagens.scrollHeight,
+        behavior: 'smooth'
+    });
+}
+
 // Atualiza ícone da engrenagem conforme tema
 function atualizarIconeEngrenagem() {
     const iconeConfig = document.getElementById('config-icon');
     if (!iconeConfig) return;
-    iconeConfig.src = document.body.classList.contains('dark-mode') ? '../images/engrenagem-escuro.png' : '../images/engrenagem.png';
-    iconeConfig.alt = document.body.classList.contains('dark-mode') ? 'Configurações - modo escuro' : 'Configurações - modo claro';
+    iconeConfig.src = document.body.classList.contains('dark-mode') 
+        ? '../images/engrenagem-escuro.png' 
+        : '../images/engrenagem.png';
+    iconeConfig.alt = document.body.classList.contains('dark-mode') 
+        ? 'Configurações - modo escuro' 
+        : 'Configurações - modo claro';
 }
 
-// Inicializa tema, áudio e configurações de voz
+// Sintetiza voz do bot usando configurações do usuário
+function falarTexto(texto) {
+    const utterance = new SpeechSynthesisUtterance(texto);
+    utterance.lang = 'pt-BR';
+    utterance.rate = parseFloat(localStorage.getItem('velocidadeVoz') || 1);
+    utterance.volume = parseFloat(localStorage.getItem('volumeVoz') || 1);
+    utterance.pitch = 1;
+    window.speechSynthesis.speak(utterance);
+}
+
+// ===============================
+// INICIALIZAÇÃO
+// ===============================
 window.addEventListener('DOMContentLoaded', () => {
+    // Tema
     const modoSalvo = localStorage.getItem('modo') || 'claro';
     document.body.classList.toggle('dark-mode', modoSalvo === 'escuro');
     if (checkboxModo) checkboxModo.checked = modoSalvo === 'escuro';
-
-    const chatLogo = document.getElementById('chatifsp');
-    if (chatLogo) chatLogo.src = modoSalvo === 'escuro' ? '../images/chatifspEscuro.png' : '../images/chatifspClaro.png';
-
     atualizarIconeEngrenagem();
 
-    // Inicializa áudio
+    // Áudio
     const audioSalvo = localStorage.getItem('audioAtivo');
     if (audioSalvo === 'false') {
         audioAtivo = false;
@@ -46,7 +71,7 @@ window.addEventListener('DOMContentLoaded', () => {
         botaoAudio.querySelector('img').src = '../images/mudo.png';
     }
 
-    // Inicializa velocidade e volume
+    // Velocidade e volume da voz
     const velocidadeSalva = localStorage.getItem('velocidadeVoz') || '1';
     sliderVelocidade.value = velocidadeSalva;
     spanVelocidade.textContent = `${velocidadeSalva}x`;
@@ -56,15 +81,16 @@ window.addEventListener('DOMContentLoaded', () => {
     spanVolume.textContent = `${Math.round(volumeSalvo * 100)}%`;
 });
 
+// ===============================
+// EVENTOS DE INTERAÇÃO
+// ===============================
+
 // Alterna tema clicando na logo
 logo.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     const modoAtual = document.body.classList.contains('dark-mode') ? 'escuro' : 'claro';
     localStorage.setItem('modo', modoAtual);
     checkboxModo.checked = document.body.classList.contains('dark-mode');
-
-    const chatLogo = document.getElementById('chatifsp');
-    if (chatLogo) chatLogo.src = modoAtual === 'escuro' ? '../images/chatifspEscuro.png' : '../images/chatifspClaro.png';
     atualizarIconeEngrenagem();
 });
 
@@ -79,6 +105,7 @@ checkboxAudio.addEventListener('change', () => {
     const img = botaoAudio.querySelector('img');
     img.src = audioAtivo ? '../images/audio.png' : '../images/mudo.png';
     img.alt = audioAtivo ? 'Ligar áudio' : 'Mutar áudio';
+    img.setAttribute('aria-label', img.alt);
     window.speechSynthesis.cancel();
 });
 
@@ -87,24 +114,22 @@ checkboxModo.addEventListener('change', () => {
     const modoAtual = checkboxModo.checked ? 'escuro' : 'claro';
     document.body.classList.toggle('dark-mode', checkboxModo.checked);
     localStorage.setItem('modo', modoAtual);
-
-    const chatLogo = document.getElementById('chatifsp');
-    if (chatLogo) chatLogo.src = modoAtual === 'escuro' ? '../images/chatifspEscuro.png' : '../images/chatifspClaro.png';
     atualizarIconeEngrenagem();
 });
 
-// Configurações de voz: velocidade e volume
+// Configurações de voz
 sliderVelocidade.addEventListener('input', () => {
     localStorage.setItem('velocidadeVoz', sliderVelocidade.value);
     spanVelocidade.textContent = `${sliderVelocidade.value}x`;
 });
-
 sliderVolume.addEventListener('input', () => {
     localStorage.setItem('volumeVoz', sliderVolume.value);
     spanVolume.textContent = `${Math.round(sliderVolume.value * 100)}%`;
 });
 
-// Adiciona mensagem na tela
+// ===============================
+// MENSAGENS
+// ===============================
 function adicionarMensagem(texto, classe) {
     if (primeiraMensagem) {
         areaMensagens.classList.remove('oculta');
@@ -130,12 +155,11 @@ function adicionarMensagem(texto, classe) {
     }
 
     areaMensagens.appendChild(div);
-    areaMensagens.scrollTop = areaMensagens.scrollHeight;
+    scrollParaFim();
 
     if (classe === 'bot' && audioAtivo) falarTexto(texto);
 }
 
-// Mensagem de carregamento do bot
 function adicionarMensagemCarregando() {
     if (primeiraMensagem) {
         areaMensagens.classList.remove('oculta');
@@ -163,7 +187,7 @@ function adicionarMensagemCarregando() {
     div.appendChild(imagemBot);
     div.appendChild(loadingContainer);
     areaMensagens.appendChild(div);
-    areaMensagens.scrollTop = areaMensagens.scrollHeight;
+    scrollParaFim();
 }
 
 function removerMensagemCarregando() {
@@ -171,17 +195,9 @@ function removerMensagemCarregando() {
     if (div) div.remove();
 }
 
-// Sintetiza voz do bot usando configurações do usuário
-function falarTexto(texto) {
-    const utterance = new SpeechSynthesisUtterance(texto);
-    utterance.lang = 'pt-BR'; // idioma fixo
-    utterance.rate = parseFloat(localStorage.getItem('velocidadeVoz') || 1);
-    utterance.volume = parseFloat(localStorage.getItem('volumeVoz') || 1);
-    utterance.pitch = 1;
-    window.speechSynthesis.speak(utterance);
-}
-
-// Chamada ao backend
+// ===============================
+// ENVIO DE PERGUNTAS
+// ===============================
 async function enviarPergunta(pergunta) {
     try {
         const response = await fetch('http://localhost:3000/chat', {
@@ -197,10 +213,13 @@ async function enviarPergunta(pergunta) {
     }
 }
 
-// Eventos de envio
+// Envio via botão ou Enter
 botaoEnviar.addEventListener('click', async () => {
     const texto = campoInput.value.trim();
     if (!texto) return;
+
+    // Cancela qualquer fala em andamento
+    window.speechSynthesis.cancel();
 
     adicionarMensagem(texto, 'usuario');
     campoInput.value = '';
@@ -213,27 +232,28 @@ botaoEnviar.addEventListener('click', async () => {
 });
 
 campoInput.addEventListener('keypress', (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && !event.shiftKey) {
         event.preventDefault();
         botaoEnviar.click();
     }
 });
 
-// Alterna áudio pelo botão
+// ===============================
+// ÁUDIO / MICROFONE
+// ===============================
 botaoAudio.addEventListener('click', () => {
     audioAtivo = !audioAtivo;
 
     const img = botaoAudio.querySelector('img');
     img.src = audioAtivo ? '../images/audio.png' : '../images/mudo.png';
     img.alt = audioAtivo ? 'Ligar áudio' : 'Mutar áudio';
+    img.setAttribute('aria-label', img.alt);
 
     if (checkboxAudio) checkboxAudio.checked = audioAtivo;
-
     localStorage.setItem('audioAtivo', audioAtivo);
     window.speechSynthesis.cancel();
 });
 
-// Reconhecimento de voz
 if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     reconhecimento = new SpeechRecognition();
@@ -253,11 +273,23 @@ if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
         const img = botaoMicrofone.querySelector('img');
         img.src = '../images/microfone-ativo.png';
         img.alt = 'Gravando...';
+        img.setAttribute('aria-label', 'Gravando...');
         reconhecimento.onend = () => {
             img.src = '../images/microfone.png';
             img.alt = 'Usar microfone';
+            img.setAttribute('aria-label', 'Usar microfone');
         };
     });
 } else {
     console.warn('Reconhecimento de voz não suportado neste navegador.');
 }
+
+// ===============================
+// ACESSIBILIDADE
+// ===============================
+campoInput.setAttribute('aria-label', 'Campo para digitar sua pergunta');
+botaoEnviar.setAttribute('aria-label', 'Enviar pergunta');
+botaoMicrofone.setAttribute('aria-label', 'Usar microfone');
+botaoAudio.setAttribute('aria-label', 'Ligar ou desligar áudio');
+botaoConfig.setAttribute('aria-label', 'Abrir configurações');
+botaoFecharConfig.setAttribute('aria-label', 'Fechar configurações');
