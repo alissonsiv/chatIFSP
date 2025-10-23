@@ -1,4 +1,4 @@
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -37,70 +37,57 @@ html{
     --linha-color: #4b5d13;
 }
 
-#modo-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    width: 70px;
-    height: 40px;
-    top: 0.5px;
-    left: 1px;
-    z-index: 999;
-    padding: 1px;
-    display: inline-block;
-}
-  
-#modo-icon {
-    max-width: 110%;
-    max-height: 110%;
-    object-fit: contain;
-    transition: transform 0.3s;
-}
-
-body{
+/* ===============================
+   ESTRUTURA GERAL
+   =============================== */
+body {
     background-color: var(--bg-color);
-    margin: 0;
-    padding: 0;
+    color: var(--text-color-info);
 }
 
-.secao{
-    height: 100vh; 
+.secao {
+    height: 100vh;
 }
 
-.navibar{
+.navibar {
     background-color: var(--nav-bg);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
 }
 
 .navibar-links {
     display: flex;
     align-items: center;
     gap: 10px;
-  }
-  
-.navibar-links a{
+}
+
+.navibar-links a {
     color: var(--nav-link);
     padding: 8px 12px;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
-.navibar-links a:hover{
+.navibar-links a:hover {
     color: var(--text-color-hover);
 }
 
-.navibar-separar{
+.navibar-separar {
     color: var(--nav-separar);
 }
 
-.logo-ifsp img{
-    max-width: 15%;
+.logo-ifsp img {
+    max-width: 120px;
     height: auto;
 }
 
-.logo{
+/* ===============================
+   CONTEÚDO PRINCIPAL
+   =============================== */
+.logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,31 +100,32 @@ body{
     height: auto;
 }
 
-.botao{
+.botao {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 5%;
 }
 
-.botao-comecar{
+.botao-comecar {
     padding: 1.5% 13.5%;
     background-color: var(--button-bg);
     color: var(--button-text);
-    border-radius: 100px; 
+    border-radius: 100px;
     font-size: 35px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
     text-decoration: none;
 }
 
-.botao-comecar:hover{
-    background-color:var(--button-bg-hover);
-    color:var(--text-color-hover);
+.botao-comecar:hover {
+    background-color: var(--button-bg-hover);
+    color: var(--text-color-hover);
 }
 
-/* SEGUNDA PÁGINA COMEÇA AQUI */
-
+/* ===============================
+   SEÇÃO INFORMATIVA
+   =============================== */
 .informacoes {
     display: flex;
     justify-content: center;
@@ -146,33 +134,13 @@ body{
     margin: 0 auto;
 }
 
-.titulo{
+.titulo {
     font-size: 30px;
     text-align: center;
 }
-  
-.info-esquerda {
-    flex: 1;
-    padding: 50px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: justify;
-    font-size: 25px;
-    color: var(--text-color-info);
-}
 
-.info-esquerda p{
-    margin-top: 10px;
-}
-  
-.info-direita {
+.info-esquerda, .info-direita {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    justify-content: center;
     padding: 40px;
     box-sizing: border-box;
     font-size: 25px;
@@ -180,27 +148,24 @@ body{
     color: var(--text-color-info);
 }
 
-.info-direita p{
+.info-esquerda p,
+.info-direita p {
     margin-top: 10px;
 }
-  
+
 .bloco-direita {
     padding: 20px;
 }
 
-.bloco-direita p a{
+.bloco-direita p a {
     text-decoration: none;
-    color:var(--text-color-info);
-}
-  
-.bloco-direita p a:hover{
-    color:var(--text-color-hover);
+    color: var(--text-color-info);
 }
 
-h2 {
-    margin-top: 0;
+.bloco-direita p a:hover {
+    color: var(--text-color-hover);
 }
-  
+
 hr {
     border: none;
     width: 100%;
@@ -213,9 +178,9 @@ hr {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 1s ease-out, transform 1s ease-out;
-  }
-  
-  .aparecer.visivel {
+}
+
+.aparecer.visivel {
     opacity: 1;
     transform: translateY(0);
-  }
+}

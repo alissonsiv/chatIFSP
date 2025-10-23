@@ -4,66 +4,86 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat IFSP Início</title>
+
     <link rel="stylesheet" href="../styles/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/favicon.ico">
 </head>
+
 <body>
-
     <section class="secao">
-      <header>
-        <div class="navibar">
-            <div class="logo-ifsp">
-              <button id="modo-toggle" onclick="toggleDarkMode()">
-                <img id="modo-icon" src="../images/logoifspClaro.png" alt="Logo IFSP">
-              </button>
+        <header>
+            <div class="navibar">
+                <div class="logo-ifsp">
+                    <img src="../images/logoifspClaro.png" alt="Logo IFSP" id="logo-ifsp">
+                </div>
+                <div class="navibar-links">
+                    <a href="chat.html">Começar</a>
+                    <span class="navibar-separar">|</span>
+                    <a href="#sobre">Sobre</a>
+                    <span class="navibar-separar">|</span>
+                    <a href="#como-usar">Como usar</a>
+                </div>
             </div>
-          <div class="navibar-links">
-            <a href="chat.html">Começar</a>
-            <span class="navibar-separar">|</span>
-            <a href="#sobre">Sobre</a>
-            <span class="navibar-separar">|</span>
-            <a href="#como-usar">Como usar</a>
-          </div>
-        </div>
-      </header>
+        </header>
 
-      <main>
-        <div class="logo">
-          <img id="chatifsp" src="../images/chatifspClaro.png" alt="Logo Chat IFSP">
-        </div>
-
-        <div class="botao">
-          <a href="chat.html" class="botao-comecar">Começar</a>
-        </div>
-      </main>
+        <main>
+            <div class="logo">
+                <img id="chatifsp" src="../images/chatifspClaro.png" alt="Logo Chat IFSP">
+            </div>
+            <div class="botao">
+                <a href="chat.html" class="botao-comecar">Começar</a>
+            </div>
+        </main>
     </section>
 
     <section class="secao">
-      <div class="informacoes aparecer">
-        <div class="info-esquerda">
-          <h2 class="titulo" id="sobre">SOBRE</h2>
-          <hr>
-          <p>O Chat IFSP é uma iniciativa do IFSP Campus Salto para ajudar os alunos ingressantes a se situarem na faculdade. O objetivo é sanar dúvidas dos estudantes em relação ao funcionamento da unidade, seja sobre professores, aulas, horários, entre outros.</p>
+        <div class="informacoes">
+            <div class="info-esquerda">
+                <h2 class="titulo aparecer" id="sobre">SOBRE</h2>
+                <hr>
+                <p>
+                    O Chat IFSP ajuda alunos ingressantes a se situarem na faculdade, respondendo dúvidas sobre funcionamento, horários e professores.
+                </p>
+            </div>
+
+            <div class="info-direita">
+                <div class="bloco-direita">
+                    <h2 class="titulo aparecer" id="como-usar">COMO USAR</h2>
+                    <hr>
+                    <p>Para usar, clique em <i><a href="chat.html">Começar</a></i> e faça sua pergunta.</p>
+                </div>
+
+                <div class="bloco-direita">
+                    <h2 class="titulo aparecer" id="responsaveis">RESPONSÁVEIS</h2>
+                    <hr>
+                    <p>Projeto criado por alunos de Ciência da Computação do IFSP Campus Salto.</p>
+                </div>
+            </div>
         </div>
-      
-        <div class="info-direita">
-          <div class="bloco-direita">
-            <h2 class="titulo" id="como-usar">COMO USAR</h2>
-            <hr>
-            <p>Para usar o Chat IFSP, basta clicar em <i><a href="chat.html">Começar</a></i> e fazer sua pergunta. </p>
-          </div>
-      
-          <div class="bloco-direita">
-            <h2 class="titulo" id="responsaveis">RESPONSÁVEIS</h2>
-            <hr>
-            <p>O projeto do Chat IFSP foi criado por alunos de ciência da computação do IFSP Campus Salto. </p>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <script src="keywords.js"></script>
-    <script src="../scripts/index-script.js"></script>
+    <script>
+        // Aplica modo salvo e atualiza logos
+        window.addEventListener('DOMContentLoaded', () => {
+            const modoSalvo = localStorage.getItem('modo') || 'claro';
+            const body = document.body;
+            const chatLogo = document.getElementById('chatifsp');
+            const logoIFSP = document.getElementById('logo-ifsp');
+
+            body.classList.toggle('dark-mode', modoSalvo === 'escuro');
+            if (chatLogo) chatLogo.src = modoSalvo === 'escuro' ? '../images/chatifspEscuro.png' : '../images/chatifspClaro.png';
+            if (logoIFSP) logoIFSP.src = modoSalvo === 'escuro' ? '../images/logoifspEscuro.png' : '../images/logoifspClaro.png';
+        });
+
+        // Anima elementos ao aparecer na tela
+        const observador = new IntersectionObserver((entradas) => {
+            entradas.forEach((entrada) => {
+                entrada.target.classList.toggle('visivel', entrada.isIntersecting);
+            });
+        }, { threshold: 0.6 });
+
+        document.querySelectorAll('.aparecer').forEach(el => observador.observe(el));
+    </script>
 </body>
 </html>

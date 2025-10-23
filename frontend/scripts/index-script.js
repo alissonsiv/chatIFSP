@@ -1,51 +1,47 @@
+// Alterna o modo escuro/claro
 function toggleDarkMode() {
-    const modoIcon = document.getElementById('modo-icon');
-    const outraImagem = document.getElementById('chatifsp');
+  const modoIcon = document.getElementById('modo-icon');
+  const chatLogo = document.getElementById('chatifsp');
 
-    document.body.classList.toggle('dark-mode');
+  document.body.classList.toggle('dark-mode');
+  const modoEscuroAtivo = document.body.classList.contains('dark-mode');
+  localStorage.setItem('modo', modoEscuroAtivo ? 'escuro' : 'claro');
 
-    const modoEscuroAtivo = document.body.classList.contains('dark-mode');
-    localStorage.setItem('modo', modoEscuroAtivo ? 'escuro' : 'claro');
+  if (modoIcon) {
+      modoIcon.src = modoEscuroAtivo ? '../images/logoifspEscuro.png' : '../images/logoifspClaro.png';
+      modoIcon.alt = modoEscuroAtivo ? 'Modo escuro' : 'Modo claro';
+  }
 
-    if (modoEscuroAtivo) {
-      modoIcon.src = '../images/logoifspEscuro.png';
-      modoIcon.alt = 'Modo escuro';
-      outraImagem.src = '../images/chatifspEscuro.png';
-      outraImagem.alt = 'Logo Chat IFSP Escuro';
-    } else {
-      modoIcon.src = '../images/logoifspClaro.png';
-      modoIcon.alt = 'Modo claro';
-      outraImagem.src = '../images/chatifspClaro.png';
-      outraImagem.alt = 'Logo Chat IFSP Claro';
-    }
+  if (chatLogo) {
+      chatLogo.src = modoEscuroAtivo ? '../images/chatifspEscuro.png' : '../images/chatifspClaro.png';
+      chatLogo.alt = modoEscuroAtivo ? 'Logo Chat IFSP Escuro' : 'Logo Chat IFSP Claro';
+  }
 }
 
+// Inicializa tema salvo e anima elementos
 window.addEventListener('DOMContentLoaded', () => {
-    const modoSalvo = localStorage.getItem('modo');
+  const modoSalvo = localStorage.getItem('modo') || 'claro';
+  const modoIcon = document.getElementById('modo-icon');
+  const chatLogo = document.getElementById('chatifsp');
 
-    if (modoSalvo === 'escuro') {
-      document.body.classList.add('dark-mode');
+  document.body.classList.toggle('dark-mode', modoSalvo === 'escuro');
 
-      document.getElementById('modo-icon').src = '../images/logoifspEscuro.png';
-      document.getElementById('modo-icon').alt = 'Modo escuro';
-      document.getElementById('chatifsp').src = '../images/chatifspEscuro.png';
-      document.getElementById('chatifsp').alt = 'Logo Chat IFSP Escuro';
-    }
-});
+  if (modoIcon) {
+      modoIcon.src = modoSalvo === 'escuro' ? '../images/logoifspEscuro.png' : '../images/logoifspClaro.png';
+      modoIcon.alt = modoSalvo === 'escuro' ? 'Modo escuro' : 'Modo claro';
+  }
 
-const observador = new IntersectionObserver((entradas) => {
-    entradas.forEach((entrada) => {
-      if (entrada.isIntersecting) {
-        entrada.target.classList.add('visivel');
-      } else {
-        entrada.target.classList.remove('visivel');
-      }
-    });
-}, 
-{
-    threshold: 0.6 
-});
+  if (chatLogo) {
+      chatLogo.src = modoSalvo === 'escuro' ? '../images/chatifspEscuro.png' : '../images/chatifspClaro.png';
+      chatLogo.alt = modoSalvo === 'escuro' ? 'Logo Chat IFSP Escuro' : 'Logo Chat IFSP Claro';
+  }
 
-document.querySelectorAll('.aparecer').forEach((el) => {
-    observador.observe(el);
+  // Observer para animar elementos visíveis
+  const observador = new IntersectionObserver((entradas) => {
+      entradas.forEach((entrada) => {
+          entrada.target.classList.toggle('visivel', entrada.isIntersecting);
+      });
+  }, { threshold: 0.6 });
+
+  document.querySelectorAll('.aparecer').forEach(el => observador.observe(el));
 });

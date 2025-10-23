@@ -4,30 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat IFSP</title>
+
     <link rel="icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../styles/chat.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="cabecalho">
         <img src="../images/chatifsp.png" alt="Logo do Chat IFSP" id="logo-chat">
+        <button id="config-toggle" aria-label="Abrir configurações">
+            <img src="../images/engrenagem.png" alt="Configurações" id="config-icon">
+        </button>
         <a href="index.html" class="botao-inicio">Início</a>
     </header>
 
     <main class="secao-chat">
         <div class="area-chat">
             <div class="area-mensagens oculta"></div>
+            
             <div class="area-entrada">
-                <button class="botao-audio"><img src="../images/audio.png" alt="Ligar/desligar áudio"></button>
+                <button class="botao-audio">
+                    <img src="../images/audio.png" alt="Ligar/desligar áudio">
+                </button>
+
                 <div class="campo-pergunta">
                     <input type="text" placeholder="Faça sua pergunta!">
-                    <button class="botao-microfone"><img src="../images/microfone.png" alt="Usar microfone"></button>
-                    <button class="botao-enviar"><img src="../images/enter.png" alt="Enviar mensagem"></button>
+                    <button class="botao-microfone">
+                        <img src="../images/microfone.png" alt="Usar microfone">
+                    </button>
+                    <button class="botao-enviar">
+                        <img src="../images/enter.png" alt="Enviar mensagem">
+                    </button>
                 </div>
             </div>
         </div>
     </main>
-    
+
+    <!-- Modal de configurações -->
+    <div id="config-modal" class="config-modal oculta">
+        <div class="config-content">
+            <h2>Configurações</h2>
+
+            <div class="config-item">
+                <label for="toggle-modo">Modo Escuro</label>
+                <input type="checkbox" id="toggle-modo">
+            </div>
+
+            <div class="config-item">
+                <label for="toggle-audio">Áudio Ativo</label>
+                <input type="checkbox" id="toggle-audio" checked>
+            </div>
+
+            <button id="config-fechar">Fechar</button>
+        </div>
+    </div>
+
     <script src="../scripts/script.js"></script>
+    <script src="../scripts/modo-tema.js"></script>
 </body>
 </html>
