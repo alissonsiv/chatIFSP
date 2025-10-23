@@ -5,6 +5,7 @@ import pyttsx3
 import json
 import re
 from functools import lru_cache
+from difflib import SequenceMatcher
 
 # ================= CONFIGURAÇÃO DA API ===================
 with open('api_key.txt', 'r') as f:
@@ -53,22 +54,23 @@ def search_keywords(question):
 
 # ================= CONTEXTO  =====================
 def generate_context(question):
-    """Gera contexto relevante para a pergunta a partir do banco de dados."""
-    words = set(remove_accents(question).split())
-    matches_list = []
+    """Gera contexto relevante usando similaridade aproximada."""
+    question_norm = remove_accents(question)
+    scored_matches = []
 
     for key, value in campus_data.items():
-        info_words = set(remove_accents(value["info"]).split())
-        matches = words & info_words
-        if matches:
-            matches_list.append((len(matches), f"{key}: {value['info']}"))
+        info_norm = remove_accents(value["info"])
+        score = SequenceMatcher(None, question_norm, info_norm).ratio()
+        if score > 0.3: 
+            scored_matches.append((score, f"{key}: {value['info']}"))
 
-    matches_list.sort(key=lambda x: x[0], reverse=True)
+    scored_matches.sort(key=lambda x: x[0], reverse=True)
 
-    if not matches_list:
-        return "\n".join([f"{key}: {value['info']}" for key, value in campus_data.items()])
+    if scored_matches:
+        return "\n".join([c[1] for c in scored_matches[:10]])  
 
-    return "\n".join([c[1] for c in matches_list[:10]])
+    return ""
+
 
 # ================= FUNÇÃO PRINCIPAL =====================
 @lru_cache(maxsize=100)
@@ -78,17 +80,17 @@ def ask_ai(question):
     prompt = (
         f"Você é um assistente virtual especializado no IFSP Campus Salto. "
         f"Responda de forma concisa e objetiva a qualquer pergunta sobre o campus, fornecendo respostas completas diretamente relacionadas. "
-        f"Evite adicionar informações não presentes no contexto. "
         f"Use frases naturais, sem símbolos ou caracteres especiais, apenas letras e acentos normais. "
         f"Contexto: {context}\n"
         f"Pergunta: {question}"
     )
 
+    print(context)
+
     try:
         response = gemini_model.generate_content(prompt)
         text = response.text.strip()
 
-        # Fallback se IA não responder corretamente
         if not text or text.lower() in ["não sei", "desculpe, não sei", "não posso responder", "não tenho informação"]:
             fallback = search_keywords(question)
             if fallback:
