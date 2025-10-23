@@ -10,6 +10,10 @@ const modalConfig = document.querySelector('.config-modal');
 const botaoFecharConfig = document.getElementById('config-fechar');
 const checkboxAudio = document.getElementById('toggle-audio');
 const checkboxModo = document.getElementById('toggle-modo');
+const sliderVelocidade = document.getElementById('velocidade-voz');
+const spanVelocidade = document.getElementById('velocidade-valor');
+const sliderVolume = document.getElementById('volume-voz');
+const spanVolume = document.getElementById('volume-valor');
 
 let primeiraMensagem = true;
 let audioAtivo = true;
@@ -23,23 +27,33 @@ function atualizarIconeEngrenagem() {
     iconeConfig.alt = document.body.classList.contains('dark-mode') ? 'Configurações - modo escuro' : 'Configurações - modo claro';
 }
 
-// Inicializa tema, áudio e logos
+// Inicializa tema, áudio e configurações de voz
 window.addEventListener('DOMContentLoaded', () => {
     const modoSalvo = localStorage.getItem('modo') || 'claro';
     document.body.classList.toggle('dark-mode', modoSalvo === 'escuro');
-
     if (checkboxModo) checkboxModo.checked = modoSalvo === 'escuro';
+
     const chatLogo = document.getElementById('chatifsp');
     if (chatLogo) chatLogo.src = modoSalvo === 'escuro' ? '../images/chatifspEscuro.png' : '../images/chatifspClaro.png';
 
     atualizarIconeEngrenagem();
 
+    // Inicializa áudio
     const audioSalvo = localStorage.getItem('audioAtivo');
     if (audioSalvo === 'false') {
         audioAtivo = false;
         if (checkboxAudio) checkboxAudio.checked = false;
         botaoAudio.querySelector('img').src = '../images/mudo.png';
     }
+
+    // Inicializa velocidade e volume
+    const velocidadeSalva = localStorage.getItem('velocidadeVoz') || '1';
+    sliderVelocidade.value = velocidadeSalva;
+    spanVelocidade.textContent = `${velocidadeSalva}x`;
+
+    const volumeSalvo = localStorage.getItem('volumeVoz') || '1';
+    sliderVolume.value = volumeSalvo;
+    spanVolume.textContent = `${Math.round(volumeSalvo * 100)}%`;
 });
 
 // Alterna tema clicando na logo
@@ -77,6 +91,17 @@ checkboxModo.addEventListener('change', () => {
     const chatLogo = document.getElementById('chatifsp');
     if (chatLogo) chatLogo.src = modoAtual === 'escuro' ? '../images/chatifspEscuro.png' : '../images/chatifspClaro.png';
     atualizarIconeEngrenagem();
+});
+
+// Configurações de voz: velocidade e volume
+sliderVelocidade.addEventListener('input', () => {
+    localStorage.setItem('velocidadeVoz', sliderVelocidade.value);
+    spanVelocidade.textContent = `${sliderVelocidade.value}x`;
+});
+
+sliderVolume.addEventListener('input', () => {
+    localStorage.setItem('volumeVoz', sliderVolume.value);
+    spanVolume.textContent = `${Math.round(sliderVolume.value * 100)}%`;
 });
 
 // Adiciona mensagem na tela
@@ -146,13 +171,13 @@ function removerMensagemCarregando() {
     if (div) div.remove();
 }
 
-// Sintetiza voz do bot
+// Sintetiza voz do bot usando configurações do usuário
 function falarTexto(texto) {
     const utterance = new SpeechSynthesisUtterance(texto);
-    utterance.lang = 'pt-BR';
-    utterance.rate = 3.7;
+    utterance.lang = 'pt-BR'; // idioma fixo
+    utterance.rate = parseFloat(localStorage.getItem('velocidadeVoz') || 1);
+    utterance.volume = parseFloat(localStorage.getItem('volumeVoz') || 1);
     utterance.pitch = 1;
-    utterance.volume = 1;
     window.speechSynthesis.speak(utterance);
 }
 
@@ -205,7 +230,6 @@ botaoAudio.addEventListener('click', () => {
     if (checkboxAudio) checkboxAudio.checked = audioAtivo;
 
     localStorage.setItem('audioAtivo', audioAtivo);
-
     window.speechSynthesis.cancel();
 });
 

@@ -1,66 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat IFSP</title>
 
-    <link rel="icon" href="../images/favicon.ico">
-    <link rel="stylesheet" href="../styles/chat.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-</head>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" href="../styles/chat.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header class="cabecalho">
-        <img src="../images/chatifsp.png" alt="Logo do Chat IFSP" id="logo-chat">
-        <button id="config-toggle" aria-label="Abrir configurações">
-            <img src="../images/engrenagem.png" alt="Configurações" id="config-icon">
-        </button>
-        <a href="index.html" class="botao-inicio">Início</a>
+      <img
+        src="../images/chatifsp.png"
+        alt="Logo do Chat IFSP"
+        id="logo-chat"
+      />
+      <button id="config-toggle" aria-label="Abrir configurações">
+        <img
+          src="../images/engrenagem.png"
+          alt="Configurações"
+          id="config-icon"
+        />
+      </button>
+      <a href="index.html" class="botao-inicio">Início</a>
     </header>
 
     <main class="secao-chat">
-        <div class="area-chat">
-            <div class="area-mensagens oculta"></div>
-            
-            <div class="area-entrada">
-                <button class="botao-audio">
-                    <img src="../images/audio.png" alt="Ligar/desligar áudio">
-                </button>
+      <div class="area-chat">
+        <div class="area-mensagens oculta"></div>
 
-                <div class="campo-pergunta">
-                    <input type="text" placeholder="Faça sua pergunta!">
-                    <button class="botao-microfone">
-                        <img src="../images/microfone.png" alt="Usar microfone">
-                    </button>
-                    <button class="botao-enviar">
-                        <img src="../images/enter.png" alt="Enviar mensagem">
-                    </button>
-                </div>
-            </div>
+        <div class="area-entrada">
+          <button class="botao-audio">
+            <img src="../images/audio.png" alt="Ligar/desligar áudio" />
+          </button>
+
+          <div class="campo-pergunta">
+            <input type="text" placeholder="Faça sua pergunta!" />
+            <button class="botao-microfone">
+              <img src="../images/microfone.png" alt="Usar microfone" />
+            </button>
+            <button class="botao-enviar">
+              <img src="../images/enter.png" alt="Enviar mensagem" />
+            </button>
+          </div>
         </div>
+      </div>
     </main>
 
     <!-- Modal de configurações -->
     <div id="config-modal" class="config-modal oculta">
-        <div class="config-content">
-            <h2>Configurações</h2>
+      <div class="config-content">
+        <h2>Configurações</h2>
 
-            <div class="config-item">
-                <label for="toggle-modo">Modo Escuro</label>
-                <input type="checkbox" id="toggle-modo">
-            </div>
-
-            <div class="config-item">
-                <label for="toggle-audio">Áudio Ativo</label>
-                <input type="checkbox" id="toggle-audio" checked>
-            </div>
-
-            <button id="config-fechar">Fechar</button>
+        <!-- Modo escuro / claro -->
+        <div class="config-item">
+          <label for="toggle-modo">Modo Escuro</label>
+          <input type="checkbox" id="toggle-modo" />
         </div>
+
+        <!-- Áudio ativo / mudo -->
+        <div class="config-item">
+          <label for="toggle-audio">Áudio Ativo</label>
+          <input type="checkbox" id="toggle-audio" checked />
+        </div>
+
+        <!-- Velocidade da voz -->
+        <div class="config-item">
+          <label for="velocidade-voz">Velocidade da voz</label>
+          <input
+            type="range"
+            id="velocidade-voz"
+            min="0.5"
+            max="3"
+            step="0.1"
+            value="1"
+          />
+          <span id="velocidade-valor">1.0x</span>
+        </div>
+
+        <!-- Volume da voz -->
+        <div class="config-item">
+          <label for="volume-voz">Volume</label>
+          <input
+            type="range"
+            id="volume-voz"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+          />
+          <span id="volume-valor">100%</span>
+        </div>
+
+        <button id="config-fechar">Fechar</button>
+      </div>
     </div>
 
     <script src="../scripts/script.js"></script>
     <script src="../scripts/modo-tema.js"></script>
-</body>
+  </body>
 </html>
